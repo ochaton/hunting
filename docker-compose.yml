@@ -1,0 +1,25 @@
+x-tnt: &tnt
+  image: ochaton/tarantool:2.9.0
+  privileged: true
+  volumes:
+    - $PWD/init.lua:/opt/tarantool/init.lua
+  command:
+    [
+      "/bin/sh",
+      "-c",
+      "apk add iproute2 && tc qdisc add dev eth0 root netem delay 50ms && tarantool /opt/tarantool/init.lua",
+    ]
+
+version: "3"
+services:
+  tnt1:
+    <<: *tnt
+  tnt2:
+    <<: *tnt
+  tnt3:
+    <<: *tnt
+  client:
+    <<: *tnt
+    volumes:
+      - $PWD:/opt/tarantool/
+    command: tarantool /opt/tarantool/client.lua
