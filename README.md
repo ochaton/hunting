@@ -5,4 +5,4 @@ Run `docker compose up` until all instances left running.
 Then enter each instance using `docker compose exec tnt1 tarantoolctl connect 3301` and see what happens.
 
 ## Too long RAFT election
-Not caught yet.
+[Look here](https://github.com/ochaton/hunting/tree/infinite-raft)
