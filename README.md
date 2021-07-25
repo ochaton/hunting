@@ -1,14 +1,13 @@
 # Bug hunting (Tarantool replication)
 
 ## Bootstrap 2 clusters even if quorums are satisfied
-Run `docker compose up` until all instances left running.
-Then enter each instance using `docker compose exec tnt1 tarantoolctl connect 3301` and see what happens.
+[Reproducer is in master](https://github.com/ochaton/hunting/tree/master)
 
 ## Too long RAFT election
-Got it!
-
 Run compose up `docker compose up`.
+
 Then do (check that tnt1 is the leader):
+
 `docker compose pause tnt1; sleep 2; docker compose unpause tnt1`
 
 Moreover we catch replication conflicts:
