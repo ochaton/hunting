@@ -29,12 +29,14 @@ local uuids = {
 	tnt2 = "a6fb5ff2-7e84-4ecf-b311-0ae70f37fb8e",
 }
 
+io.popen("tc qdisc add dev eth0 root netem delay 50ms"):read("*all")
+
 -- DROP tnt1 -> tnt3 and tnt3 -> tnt1 packages
-if docker_name == "tnt1" then
-	io.popen("iptables -I INPUT -s "..ips["tnt3"].." -j DROP"):read("*all")
-elseif docker_name == "tnt3" then
-	io.popen("iptables -I INPUT -s "..ips["tnt1"].." -j DROP"):read("*all")
-end
+-- if docker_name == "tnt1" then
+-- 	io.popen("iptables -I INPUT -s "..ips["tnt3"].." -j DROP"):read("*all")
+-- elseif docker_name == "tnt3" then
+-- 	io.popen("iptables -I INPUT -s "..ips["tnt1"].." -j DROP"):read("*all")
+-- end
 
 box.cfg{
 	instance_uuid = assert(uuids[docker_name], "failed to get instance_uuid"),
