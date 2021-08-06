@@ -1,18 +1,11 @@
 # Bug hunting (Tarantool replication)
 
-## Bootstrap 2 clusters even if quorums are satisfied
-[Reproducer is in master](https://github.com/ochaton/hunting/tree/master)
-
 ## Too long RAFT election
-Run compose up `docker compose up`.
+Run bash script `./run.sh`.
 
-Then do (check that tnt1 is the leader):
+Wait several seconds (5-10) when cluster will fully bootstrap and client will push messages;
 
-`docker compose pause tnt1; sleep 2; docker compose unpause tnt1`
+Run in separate console `./get_leader_pid.sh` to make sure that cluster has been elected new Leader.
+Run in separate console `./do_the_infinite_raft.sh` script to reproduce the issue (sometimes it takes more than once to do it).
 
-Moreover we catch replication conflicts:
-```
-tnt1_1    | 2021-07-25 08:38:45.958 [1] main/112/applier/tnt3:3301 applier.cc:298 E> error applying row: {type: 'INSERT', replica_id: 3, lsn: 2, space_id: 512, index_id: 0, tuple: [712, {0: 5, 1: 719, 3: 1}, {"state": "leader", "vote": 3, "leader": 3, "term": 6}, 1.6272e+09]}
-tnt1_1    | 2021-07-25 08:38:45.958 [1] main/112/applier/tnt3:3301 I> can't read row
-tnt1_1    | 2021-07-25 08:38:45.958 [1] main/112/applier/tnt3:3301 memtx_tree.cc:863 E> ER_TUPLE_FOUND: Duplicate key exists in unique index "pri" in space "test" with old tuple - [712, {0: 2, 1: 719}, {"state": "leader", "vote": 1, "leader": 1, "term": 2}, 1.6272e+09] and new tuple - [712, {0: 5, 1: 719, 3: 1}, {"state": "leader", "vote": 3, "leader": 3, "term": 6}, 1.6272e+09]
-```
+You may read merged logs in `tarantool.log` file.

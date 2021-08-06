@@ -1,5 +1,5 @@
 local pool = require 'pool'(
-	{ "tnt1:3301", "tnt2:3301", "tnt3:3301" },
+	{ "127.0.0.1:3301", "127.0.0.1:3302", "127.0.0.1:3303" },
 	{ timeout = 10 }
 )
 
@@ -14,6 +14,7 @@ local function loop()
 		return box.info
 	]])
 	log.info("DDL complete on %s/%s", info.id, json.encode(info.vclock), json.encode(info.election))
+	log.info(pool:callrw('box.info'))
 
 	for i = 1, 1e6 do
 		pool:callrw('dostring', [[

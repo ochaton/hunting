@@ -1,0 +1,1505 @@
++ rm -rvf .tnt
+.tnt/tnt3/00000000000000000887.xlog
+.tnt/tnt3/00000000000000000004.snap
+.tnt/tnt3/00000000000000000004.xlog
+.tnt/tnt3
+.tnt/tnt2/00000000000000000003.snap
+.tnt/tnt2/00000000000000000003.xlog
+.tnt/tnt2/00000000000000000478.xlog
+.tnt/tnt2
+.tnt/tnt1/00000000000000000885.xlog
+.tnt/tnt1/00000000000000000000.xlog
+.tnt/tnt1/00000000000000000000.snap
+.tnt/tnt1
+.tnt
++ mkdir -p .tnt/tnt1 .tnt/tnt2 .tnt/tnt3
++ tarantool client.lua
++ tarantool tnt1/init.lua
++ tarantool tnt2/init.lua
++ wait
++ tarantool tnt3/init.lua
+MY HOSTNAME: tnt3
+2021-08-06 10:58:08.178 [93586] main/103/init.lua C> Tarantool 2.7.2-0-g4d8c068
+2021-08-06 10:58:08.179 [93586] main/103/init.lua C> log level 5
+2021-08-06 10:58:08.179 [93586] main/103/init.lua I> wal/engine cleanup is paused
+2021-08-06 10:58:08.179 [93586] main/103/init.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-08-06 10:58:08.179 [93586] main/103/init.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-08-06 10:58:08.179 [93586] main/103/init.lua I> mapping 134217728 bytes for vinyl tuple arena...
+MY HOSTNAME: tnt2
+2021-08-06 10:58:08.180 [93585] main/103/init.lua C> Tarantool 2.7.2-0-g4d8c068
+2021-08-06 10:58:08.180 [93585] main/103/init.lua C> log level 5
+Waiting for master for 9.999s
+entering the event loop
+2021-08-06 10:58:08.180 [93585] main/103/init.lua I> wal/engine cleanup is paused
+2021-08-06 10:58:08.180 [93586] main/103/init.lua I> instance uuid aaaaaaaa-0003-0000-0000-000000000001
+2021-08-06 10:58:08.180 [93585] main/103/init.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-08-06 10:58:08.180 [93585] main/103/init.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-08-06 10:58:08.180 [93585] main/103/init.lua I> mapping 134217728 bytes for vinyl tuple arena...
+MY HOSTNAME: tnt1
+2021-08-06 10:58:08.181 [93584] main/103/init.lua C> Tarantool 2.7.2-0-g4d8c068
+2021-08-06 10:58:08.182 [93584] main/103/init.lua C> log level 5
+2021-08-06 10:58:08.182 [93584] main/103/init.lua I> wal/engine cleanup is paused
+2021-08-06 10:58:08.182 [93585] main/103/init.lua I> instance uuid aaaaaaaa-0002-0000-0000-000000000001
+2021-08-06 10:58:08.182 [93584] main/103/init.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-08-06 10:58:08.182 [93584] main/103/init.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-08-06 10:58:08.182 [93584] main/103/init.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-08-06 10:58:08.183 [93586] iproto/101/main I> binary: bound to [::]:3303
+2021-08-06 10:58:08.183 [93586] main/103/init.lua I> connecting to 3 replicas
+2021-08-06 10:58:08.184 [93584] main/103/init.lua I> instance uuid aaaaaaaa-0001-0000-0000-000000000001
+127.0.0.1:3301: Connection refused
+2021-08-06 10:58:08.184 [93586] main/110/applier/127.0.0.1:3301 I> can't connect to master
+2021-08-06 10:58:08.184 [93586] main/110/applier/127.0.0.1:3301 coio.cc:108 !> SystemError connect, called on fd 16, aka 127.0.0.1:56715: Connection refused
+2021-08-06 10:58:08.184 [93586] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+127.0.0.1:3302: Connection refused
+2021-08-06 10:58:08.184 [93586] main/111/applier/127.0.0.1:3302 I> can't connect to master
+2021-08-06 10:58:08.184 [93586] main/111/applier/127.0.0.1:3302 coio.cc:108 !> SystemError connect, called on fd 17, aka 127.0.0.1:56716: Connection refused
+2021-08-06 10:58:08.184 [93586] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:08.184 [93586] main/112/applier/127.0.0.1:3303 I> remote master aaaaaaaa-0003-0000-0000-000000000001 at 127.0.0.1:3303 running Tarantool 2.7.2
+127.0.0.1:3303: Space '281' does not exist
+2021-08-06 10:58:08.185 [93585] iproto/101/main I> binary: bound to [::]:3302
+2021-08-06 10:58:08.185 [93585] main/103/init.lua I> connecting to 3 replicas
+2021-08-06 10:58:08.185 [93585] main/110/applier/127.0.0.1:3301 I> can't connect to master
+2021-08-06 10:58:08.185 [93585] main/110/applier/127.0.0.1:3301 coio.cc:108 !> SystemError connect, called on fd 16, aka 127.0.0.1:56721: Connection refused
+2021-08-06 10:58:08.185 [93585] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+2021-08-06 10:58:08.185 [93584] iproto/101/main I> binary: bound to [::]:3301
+2021-08-06 10:58:08.185 [93585] main/112/applier/127.0.0.1:3303 I> remote master aaaaaaaa-0003-0000-0000-000000000001 at 127.0.0.1:3303 running Tarantool 2.7.2
+2021-08-06 10:58:08.185 [93584] main/103/init.lua I> connecting to 3 replicas
+2021-08-06 10:58:08.186 [93585] main/111/applier/127.0.0.1:3302 I> remote master aaaaaaaa-0002-0000-0000-000000000001 at 127.0.0.1:3302 running Tarantool 2.7.2
+2021-08-06 10:58:08.186 [93584] main/111/applier/127.0.0.1:3302 I> remote master aaaaaaaa-0002-0000-0000-000000000001 at 127.0.0.1:3302 running Tarantool 2.7.2
+2021-08-06 10:58:08.186 [93584] main/110/applier/127.0.0.1:3301 I> remote master aaaaaaaa-0001-0000-0000-000000000001 at 127.0.0.1:3301 running Tarantool 2.7.2
+2021-08-06 10:58:08.186 [93584] main/112/applier/127.0.0.1:3303 I> remote master aaaaaaaa-0003-0000-0000-000000000001 at 127.0.0.1:3303 running Tarantool 2.7.2
+2021-08-06 10:58:08.186 [93584] main/103/init.lua I> connected to 3 replicas
+2021-08-06 10:58:08.186 [93584] main/103/init.lua I> initializing an empty data directory
+2021-08-06 10:58:08.193 [93584] main/103/init.lua I> assigned id 1 to replica aaaaaaaa-0001-0000-0000-000000000001
+2021-08-06 10:58:08.193 [93584] main/103/init.lua I> cluster uuid f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8
+2021-08-06 10:58:08.193 [93584] snapshot/101/main I> saving snapshot `.tnt/tnt1/00000000000000000000.snap.inprogress'
+2021-08-06 10:58:08.195 [93584] snapshot/101/main I> done
+2021-08-06 10:58:08.195 [93584] main/103/init.lua I> RAFT: start state machine
+2021-08-06 10:58:08.195 [93584] main/103/init.lua I> ready to accept requests
+2021-08-06 10:58:08.195 [93584] main/103/init.lua I> RAFT: bump term to 2, follow
+2021-08-06 10:58:08.195 [93584] main/104/gc I> wal/engine cleanup is resumed
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'custom_proc_title' configuration option to "tnt1"
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'log_level' configuration option to 5
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'replication_connect_timeout' configuration option to 5
+2021-08-06 10:58:08.196 [93584] main/105/checkpoint_daemon I> scheduled next checkpoint for Fri Aug  6 12:25:11 2021
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'replication_timeout' configuration option to 0.5
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'election_timeout' configuration option to 0.5
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'election_mode' configuration option to "candidate"
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'listen' configuration option to "3301"
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'replication_synchro_quorum' configuration option to 2
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'replication' configuration option to ["127.0.0.1:3301","127.0.0.1:3302","127.0.0.1:3303"]
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'instance_uuid' configuration option to "aaaaaaaa-0001-0000-0000-000000000001"
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'replication_connect_quorum' configuration option to 2
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'log_format' configuration option to "plain"
+2021-08-06 10:58:08.196 [93584] main/111/applier/127.0.0.1:3302 I> can't join/subscribe
+2021-08-06 10:58:08.196 [93584] main/111/applier/127.0.0.1:3302 box.cc:2659 E> ER_LOADING: Instance bootstrap hasn't finished yet
+2021-08-06 10:58:08.196 [93584] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:08.196 [93584] main/112/applier/127.0.0.1:3303 I> can't join/subscribe
+2021-08-06 10:58:08.196 [93584] main/112/applier/127.0.0.1:3303 box.cc:2659 E> ER_LOADING: Instance bootstrap hasn't finished yet
+2021-08-06 10:58:08.196 [93584] main/112/applier/127.0.0.1:3303 I> will retry every 0.50 second
+2021-08-06 10:58:08.196 [93584] main/113/raft_worker I> RAFT: persisted state {term: 2}
+2021-08-06 10:58:08.196 [93584] main/113/raft_worker I> RAFT: vote for 1, follow
+2021-08-06 10:58:08.196 [93584] main/103/init.lua I> set 'replicaset_uuid' configuration option to "f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8"
+2021-08-06 10:58:08.197 [93584] main/113/raft_worker I> RAFT: persisted state {term: 2, vote: 1}
+2021-08-06 10:58:08.197 [93584] main/113/raft_worker I> RAFT: enter leader state with quorum 1
+2021-08-06 10:58:08.197 [93584] main/122/rwbell I> RW vclock:{"0":2,"1":2} election:{"state":"leader","vote":1,"leader":1,"term":2} (was ro:1.00s)
+2021-08-06 10:58:08.197 [93584] main C> entering the event loop
+127.0.0.1:3302: Space '281' does not exist
+Connected to 127.0.0.1:3301 (aaaaaaaa-0001-0000-0000-000000000001)
+127.0.0.1:3301 became rw
+Master discovered: 127.0.0.1:3301 (aaaaaaaa-0001-0000-0000-000000000001) in 0.315s
+DDL complete on 1/{"0":2,"1":5}
+{"version":"2.7.2-0-g4d8c068","id":1,"ro":false,"uuid":"aaaaaaaa-0001-0000-0000-000000000001","package":"Tarantool","cluster":{"uuid":"f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8"},"listen":"[::]:3301","replication_anon":{"count":0},"replication":{"1":{"lsn":5,"uuid":"aaaaaaaa-0001-0000-0000-000000000001","id":1}},"election":{"state":"leader","vote":1,"term":2,"leader":1},"signature":7,"status":"running","vclock":{"0":2,"1":5},"uptime":1,"lsn":5,"gc":[],"vinyl":[],"memory":[],"sql":[]}
+2021-08-06 10:58:08.690 [93586] main/111/applier/127.0.0.1:3302 I> remote master aaaaaaaa-0002-0000-0000-000000000001 at 127.0.0.1:3302 running Tarantool 2.7.2
+2021-08-06 10:58:08.690 [93585] main/110/applier/127.0.0.1:3301 I> remote master aaaaaaaa-0001-0000-0000-000000000001 at 127.0.0.1:3301 running Tarantool 2.7.2
+2021-08-06 10:58:08.690 [93586] main/110/applier/127.0.0.1:3301 I> remote master aaaaaaaa-0001-0000-0000-000000000001 at 127.0.0.1:3301 running Tarantool 2.7.2
+2021-08-06 10:58:08.690 [93585] main/103/init.lua I> connected to 3 replicas
+2021-08-06 10:58:08.691 [93586] main/103/init.lua I> connected to 3 replicas
+2021-08-06 10:58:08.691 [93586] main/103/init.lua I> bootstrapping replica from aaaaaaaa-0001-0000-0000-000000000001 at 127.0.0.1:3301
+2021-08-06 10:58:08.691 [93585] main/103/init.lua I> bootstrapping replica from aaaaaaaa-0001-0000-0000-000000000001 at 127.0.0.1:3301
+2021-08-06 10:58:08.691 [93584] main/109/main I> joining replica aaaaaaaa-0003-0000-0000-000000000001 at fd 18, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56730
+2021-08-06 10:58:08.691 [93584] main/123/main I> joining replica aaaaaaaa-0002-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56731
+2021-08-06 10:58:08.692 [93586] main/110/applier/127.0.0.1:3301 I> cluster uuid f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8
+2021-08-06 10:58:08.693 [93585] main/110/applier/127.0.0.1:3301 I> cluster uuid f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8
+2021-08-06 10:58:08.702 [93584] main/123/main I> initial data sent.
+2021-08-06 10:58:08.702 [93584] main I> assigned id 2 to replica aaaaaaaa-0002-0000-0000-000000000001
+2021-08-06 10:58:08.703 [93584] main/109/main I> initial data sent.
+2021-08-06 10:58:08.703 [93584] relay/[::ffff:127.0.0.1]:56731/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:08.703 [93584] main I> assigned id 3 to replica aaaaaaaa-0003-0000-0000-000000000001
+2021-08-06 10:58:08.704 [93584] main/123/main I> final data sent.
+2021-08-06 10:58:08.704 [93584] relay/[::ffff:127.0.0.1]:56730/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:08.705 [93584] main/109/main I> final data sent.
+2021-08-06 10:58:08.709 [93586] main/110/applier/127.0.0.1:3301 I> assigned id 1 to replica aaaaaaaa-0001-0000-0000-000000000001
+2021-08-06 10:58:08.709 [93586] main/110/applier/127.0.0.1:3301 I> initial data received
+2021-08-06 10:58:08.709 [93586] main/110/applier/127.0.0.1:3301 I> assigned id 2 to replica aaaaaaaa-0002-0000-0000-000000000001
+2021-08-06 10:58:08.709 [93586] main/110/applier/127.0.0.1:3301 I> assigned id 3 to replica aaaaaaaa-0003-0000-0000-000000000001
+2021-08-06 10:58:08.709 [93586] main/110/applier/127.0.0.1:3301 I> final data received
+2021-08-06 10:58:08.710 [93586] snapshot/101/main I> saving snapshot `.tnt/tnt3/00000000000000000014.snap.inprogress'
+2021-08-06 10:58:08.710 [93585] main/110/applier/127.0.0.1:3301 I> assigned id 1 to replica aaaaaaaa-0001-0000-0000-000000000001
+2021-08-06 10:58:08.710 [93585] main/110/applier/127.0.0.1:3301 I> initial data received
+2021-08-06 10:58:08.710 [93585] main/110/applier/127.0.0.1:3301 I> assigned id 2 to replica aaaaaaaa-0002-0000-0000-000000000001
+2021-08-06 10:58:08.710 [93585] main/110/applier/127.0.0.1:3301 I> final data received
+2021-08-06 10:58:08.711 [93585] snapshot/101/main I> saving snapshot `.tnt/tnt2/00000000000000000013.snap.inprogress'
+2021-08-06 10:58:08.712 [93586] snapshot/101/main I> done
+2021-08-06 10:58:08.712 [93585] snapshot/101/main I> done
+2021-08-06 10:58:08.712 [93586] main/103/init.lua I> RAFT: start state machine
+2021-08-06 10:58:08.713 [93586] main/103/init.lua I> ready to accept requests
+2021-08-06 10:58:08.713 [93586] main/103/init.lua I> synchronizing with 2 replicas
+2021-08-06 10:58:08.713 [93586] main/111/applier/127.0.0.1:3302 I> can't join/subscribe
+2021-08-06 10:58:08.713 [93586] main/111/applier/127.0.0.1:3302 box.cc:2659 E> ER_LOADING: Instance bootstrap hasn't finished yet
+2021-08-06 10:58:08.713 [93584] main/109/main I> subscribed replica aaaaaaaa-0003-0000-0000-000000000001 at fd 18, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56730
+2021-08-06 10:58:08.713 [93586] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:08.713 [93584] main/109/main I> remote vclock {1: 14} local vclock {0: 2, 1: 14}
+2021-08-06 10:58:08.713 [93586] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:08.713 [93586] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 14} local vclock {1: 14}
+2021-08-06 10:58:08.713 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 2, vote: 1, state: leader} from 1
+2021-08-06 10:58:08.713 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 2, follow
+2021-08-06 10:58:08.713 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:08.713 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: leader is 1, follow
+2021-08-06 10:58:08.713 [93585] main/103/init.lua I> RAFT: start state machine
+2021-08-06 10:58:08.713 [93585] main/103/init.lua I> ready to accept requests
+2021-08-06 10:58:08.713 [93585] main/103/init.lua I> synchronizing with 2 replicas
+2021-08-06 10:58:08.713 [93585] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:08.713 [93584] main/123/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56731
+2021-08-06 10:58:08.713 [93585] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 14} local vclock {1: 13}
+2021-08-06 10:58:08.713 [93584] main/123/main I> remote vclock {1: 13} local vclock {0: 2, 1: 14}
+2021-08-06 10:58:08.713 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 2, vote: 1, state: leader} from 1
+2021-08-06 10:58:08.713 [93586] main/109/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 16, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56723
+2021-08-06 10:58:08.713 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 2, follow
+2021-08-06 10:58:08.713 [93586] main/109/main I> remote vclock {1: 13} local vclock {1: 14}
+2021-08-06 10:58:08.713 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:08.713 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: leader is 1, follow
+2021-08-06 10:58:08.713 [93585] main/112/applier/127.0.0.1:3303 I> subscribed
+2021-08-06 10:58:08.713 [93585] main/112/applier/127.0.0.1:3303 I> remote vclock {1: 14} local vclock {1: 13}
+2021-08-06 10:58:08.714 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 1, state: follower} from 3
+2021-08-06 10:58:08.714 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: the message is ignored due to outdated term - current term is 2
+2021-08-06 10:58:08.714 [93586] main/113/raft_worker I> RAFT: persisted state {term: 2}
+2021-08-06 10:58:08.714 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 2, vote: 1, state: leader} from 1
+2021-08-06 10:58:08.714 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 1
+2021-08-06 10:58:08.714 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 2, state: follower} from 3
+2021-08-06 10:58:08.714 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 2, vote: 1, state: leader} from 1
+2021-08-06 10:58:08.714 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 1
+2021-08-06 10:58:08.714 [93584] relay/[::ffff:127.0.0.1]:56731/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:08.714 [93584] relay/[::ffff:127.0.0.1]:56730/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:08.714 [93585] main/113/raft_worker I> RAFT: persisted state {term: 2}
+2021-08-06 10:58:08.714 [93585] main I> assigned id 3 to replica aaaaaaaa-0003-0000-0000-000000000001
+2021-08-06 10:58:08.714 [93585] main/114/applierw/127.0.0.1:3301 C> leaving orphan mode
+2021-08-06 10:58:08.714 [93585] main/103/init.lua I> replica set sync complete
+2021-08-06 10:58:08.714 [93585] main/103/init.lua C> leaving orphan mode
+2021-08-06 10:58:08.714 [93586] main/114/applierw/127.0.0.1:3301 C> leaving orphan mode
+2021-08-06 10:58:08.714 [93586] main/103/init.lua I> replica set sync complete
+2021-08-06 10:58:08.714 [93586] main/103/init.lua C> leaving orphan mode
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'custom_proc_title' configuration option to "tnt2"
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'custom_proc_title' configuration option to "tnt3"
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'log_level' configuration option to 5
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'log_level' configuration option to 5
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'replication_connect_timeout' configuration option to 5
+2021-08-06 10:58:08.715 [93585] main/105/checkpoint_daemon I> scheduled next checkpoint for Fri Aug  6 12:54:18 2021
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'replication_connect_timeout' configuration option to 5
+2021-08-06 10:58:08.715 [93586] main/105/checkpoint_daemon I> scheduled next checkpoint for Fri Aug  6 12:22:01 2021
+2021-08-06 10:58:08.715 [93585] main/115/applierw/127.0.0.1:3303 C> leaving orphan mode
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'replication_timeout' configuration option to 0.5
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'election_timeout' configuration option to 0.5
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'election_mode' configuration option to "candidate"
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'replication_timeout' configuration option to 0.5
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'election_timeout' configuration option to 0.5
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'election_mode' configuration option to "candidate"
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'listen' configuration option to "3302"
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'replication_synchro_quorum' configuration option to 2
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'listen' configuration option to "3303"
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'replication_synchro_quorum' configuration option to 2
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'replication' configuration option to ["127.0.0.1:3301","127.0.0.1:3302","127.0.0.1:3303"]
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'instance_uuid' configuration option to "aaaaaaaa-0002-0000-0000-000000000001"
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'replication' configuration option to ["127.0.0.1:3301","127.0.0.1:3302","127.0.0.1:3303"]
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'instance_uuid' configuration option to "aaaaaaaa-0003-0000-0000-000000000001"
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'replication_connect_quorum' configuration option to 2
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'log_format' configuration option to "plain"
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'replication_connect_quorum' configuration option to 2
+2021-08-06 10:58:08.715 [93585] main/103/init.lua I> set 'replicaset_uuid' configuration option to "f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8"
+2021-08-06 10:58:08.715 [93586] main/103/init.lua I> set 'log_format' configuration option to "plain"
+2021-08-06 10:58:08.716 [93586] main/103/init.lua I> set 'replicaset_uuid' configuration option to "f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8"
+2021-08-06 10:58:08.716 [93586] relay/[::ffff:127.0.0.1]:56723/101/main recovery.cc:207 E> XlogGapError: Missing .xlog file between LSN 13 {1: 13} and 14 {1: 14}
+2021-08-06 10:58:08.716 [93586] relay/[::ffff:127.0.0.1]:56723/101/main C> exiting the relay loop
+2021-08-06 10:58:08.716 [93585] main/112/applier/127.0.0.1:3303 I> can't read row
+2021-08-06 10:58:08.716 [93585] main/112/applier/127.0.0.1:3303 recovery.cc:207 E> XlogGapError: Missing .xlog file between LSN 13 {1: 13} and 14 {1: 14}
+2021-08-06 10:58:08.716 [93585] main/112/applier/127.0.0.1:3303 I> will retry every 0.50 second
+Connected to 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001)
+127.0.0.1:3303 became ro
+2021-08-06 10:58:09.213 [93586] main/109/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56737
+2021-08-06 10:58:09.213 [93586] main/109/main I> remote vclock {1: 29} local vclock {0: 1, 1: 29}
+2021-08-06 10:58:09.213 [93585] main/109/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 18, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56738
+2021-08-06 10:58:09.213 [93585] main/109/main I> remote vclock {1: 29} local vclock {0: 1, 1: 29}
+2021-08-06 10:58:09.214 [93584] main/112/applier/127.0.0.1:3303 I> subscribed
+2021-08-06 10:58:09.214 [93584] main/112/applier/127.0.0.1:3303 I> remote vclock {1: 29} local vclock {0: 2, 1: 29}
+2021-08-06 10:58:09.214 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 2, state: follower} from 3
+2021-08-06 10:58:09.214 [93584] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:09.214 [93584] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 29} local vclock {0: 2, 1: 29}
+2021-08-06 10:58:09.214 [93586] main/104/gc I> wal/engine cleanup is resumed
+2021-08-06 10:58:09.214 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 2, state: follower} from 2
+2021-08-06 10:58:09.214 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 2, state: follower} from 3
+2021-08-06 10:58:09.214 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 2, state: follower} from 2
+2021-08-06 10:58:09.215 [93585] main/124/main I> subscribed replica aaaaaaaa-0003-0000-0000-000000000001 at fd 20, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56739
+2021-08-06 10:58:09.215 [93586] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:09.215 [93585] main/124/main I> remote vclock {1: 29} local vclock {0: 1, 1: 29}
+2021-08-06 10:58:09.215 [93586] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 29} local vclock {0: 1, 1: 29}
+2021-08-06 10:58:09.215 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 2, state: follower} from 2
+2021-08-06 10:58:09.215 [93585] main/104/gc I> wal/engine cleanup is resumed
+2021-08-06 10:58:09.215 [93586] relay/[::ffff:127.0.0.1]:56737/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:58:09.215 [93585] relay/[::ffff:127.0.0.1]:56738/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:09.215 [93584] main/125/applierw/127.0.0.1:3303 C> leaving orphan mode
+2021-08-06 10:58:09.215 [93584] main/126/applierw/127.0.0.1:3302 C> leaving orphan mode
+2021-08-06 10:58:09.216 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 2, state: follower} from 2
+2021-08-06 10:58:09.216 [93585] relay/[::ffff:127.0.0.1]:56739/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:09.216 [93586] main/124/applierw/127.0.0.1:3302 C> leaving orphan mode
+2021-08-06 10:58:09.217 [93586] main/115/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 24, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56740
+2021-08-06 10:58:09.217 [93586] main/115/main I> remote vclock {1: 29} local vclock {0: 1, 1: 29}
+2021-08-06 10:58:09.217 [93585] main/112/applier/127.0.0.1:3303 I> subscribed
+2021-08-06 10:58:09.217 [93585] main/112/applier/127.0.0.1:3303 I> remote vclock {1: 29} local vclock {0: 1, 1: 29}
+2021-08-06 10:58:09.217 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 2, state: follower} from 3
+2021-08-06 10:58:09.218 [93586] relay/[::ffff:127.0.0.1]:56740/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:58:09.218 [93585] main/126/applierw/127.0.0.1:3303 C> leaving orphan mode
+2021-08-06 10:58:11.716 [93585] main C> entering the event loop
+2021-08-06 10:58:11.716 [93586] main C> entering the event loop
+2021-08-06 10:58:16.730 [93586] relay/[::ffff:127.0.0.1]:56737/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.730 [93586] relay/[::ffff:127.0.0.1]:56737/101/main C> exiting the relay loop
+2021-08-06 10:58:16.747 [93585] relay/[::ffff:127.0.0.1]:56738/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.748 [93585] relay/[::ffff:127.0.0.1]:56738/101/main C> exiting the relay loop
+2021-08-06 10:58:16.902 [93585] main I> RAFT: begin new election round
+2021-08-06 10:58:16.902 [93585] main I> RAFT: bump term to 3, follow
+2021-08-06 10:58:16.902 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:58:16.902 [93586] main/110/applier/127.0.0.1:3301 I> can't read row
+2021-08-06 10:58:16.902 [93586] main/110/applier/127.0.0.1:3301 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.902 [93586] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+2021-08-06 10:58:16.902 [93585] main/110/applier/127.0.0.1:3301 I> can't read row
+2021-08-06 10:58:16.902 [93585] main/110/applier/127.0.0.1:3301 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.902 [93585] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+2021-08-06 10:58:16.902 [93586] main I> RAFT: begin new election round
+2021-08-06 10:58:16.902 [93586] main I> RAFT: bump term to 3, follow
+2021-08-06 10:58:16.902 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:58:16.903 [93585] main/113/raft_worker I> RAFT: persisted state {term: 3, vote: 2}
+2021-08-06 10:58:16.903 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:16.903 [93586] main/113/raft_worker I> RAFT: persisted state {term: 3, vote: 3}
+2021-08-06 10:58:16.903 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:16.903 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 3, vote: 3, state: candidate, vclock: {1: 198}} from 3
+2021-08-06 10:58:16.903 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 3, vote: 2, state: candidate, vclock: {1: 198}} from 2
+2021-08-06 10:58:16.903 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:16.903 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:16.936 [93584] main/112/applier/127.0.0.1:3303 I> can't read row
+2021-08-06 10:58:16.936 [93584] main/112/applier/127.0.0.1:3303 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.936 [93584] main/112/applier/127.0.0.1:3303 I> will retry every 0.50 second
+2021-08-06 10:58:16.936 [93584] main/111/applier/127.0.0.1:3302 I> can't read row
+2021-08-06 10:58:16.936 [93584] main/111/applier/127.0.0.1:3302 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.936 [93584] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:16.938 [93584] relay/[::ffff:127.0.0.1]:56730/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.938 [93584] relay/[::ffff:127.0.0.1]:56731/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:16.938 [93584] relay/[::ffff:127.0.0.1]:56731/101/main C> exiting the relay loop
+2021-08-06 10:58:16.938 [93584] relay/[::ffff:127.0.0.1]:56730/101/main C> exiting the relay loop
+2021-08-06 10:58:17.408 [93584] main/109/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56752
+2021-08-06 10:58:17.408 [93584] main/109/main I> remote vclock {1: 198} local vclock {0: 2, 1: 212}
+2021-08-06 10:58:17.408 [93585] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:17.408 [93585] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 212} local vclock {0: 2, 1: 198}
+2021-08-06 10:58:17.408 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 2, vote: 1, state: leader} from 1
+2021-08-06 10:58:17.408 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: the message is ignored due to outdated term - current term is 3
+2021-08-06 10:58:17.408 [93584] main/123/main I> subscribed replica aaaaaaaa-0003-0000-0000-000000000001 at fd 18, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56751
+2021-08-06 10:58:17.408 [93584] main/123/main I> remote vclock {1: 198} local vclock {0: 2, 1: 212}
+2021-08-06 10:58:17.408 [93586] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:17.408 [93586] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 212} local vclock {0: 2, 1: 198}
+2021-08-06 10:58:17.408 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 2, vote: 1, state: leader} from 1
+2021-08-06 10:58:17.409 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: the message is ignored due to outdated term - current term is 3
+2021-08-06 10:58:17.410 [93584] relay/[::ffff:127.0.0.1]:56752/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:17.410 [93584] relay/[::ffff:127.0.0.1]:56751/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:17.414 [93585] main I> RAFT: begin new election round
+2021-08-06 10:58:17.414 [93585] main I> RAFT: bump term to 4, follow
+2021-08-06 10:58:17.414 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:58:17.415 [93585] main/113/raft_worker I> RAFT: persisted state {term: 4, vote: 2}
+2021-08-06 10:58:17.415 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:17.415 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 4, vote: 2, state: candidate, vclock: {1: 198}} from 2
+2021-08-06 10:58:17.415 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 4, follow
+2021-08-06 10:58:17.415 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:58:17.415 [93586] main/113/raft_worker I> RAFT: persisted state {term: 4, vote: 2}
+2021-08-06 10:58:17.415 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 4, vote: 2, state: follower} from 3
+2021-08-06 10:58:17.415 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:58:17.415 [93585] main/127/rwbell I> RW vclock:{"0":3,"1":198} election:{"state":"leader","vote":2,"leader":2,"term":4} (was ro:5.70s)
+2021-08-06 10:58:17.416 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 4, vote: 2, state: leader} from 2
+2021-08-06 10:58:17.416 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:17.416 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:58:17.416 [93585] relay/[::ffff:127.0.0.1]:56739/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:17.416 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 4, vote: 2, state: follower} from 3
+2021-08-06 10:58:17.416 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:58:17.442 [93586] main/125/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56753
+2021-08-06 10:58:17.442 [93584] main/112/applier/127.0.0.1:3303 I> subscribed
+2021-08-06 10:58:17.442 [93586] main/125/main I> remote vclock {1: 213} local vclock {0: 3, 1: 198, 2: 1}
+2021-08-06 10:58:17.442 [93584] main/112/applier/127.0.0.1:3303 I> remote vclock {1: 198, 2: 1} local vclock {0: 2, 1: 213}
+2021-08-06 10:58:17.442 [93585] main/128/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56754
+2021-08-06 10:58:17.442 [93585] main/128/main I> remote vclock {1: 213} local vclock {0: 3, 1: 198, 2: 1}
+2021-08-06 10:58:17.442 [93584] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:17.442 [93584] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 198, 2: 1} local vclock {0: 2, 1: 213}
+2021-08-06 10:58:17.442 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 4, vote: 2, state: follower} from 3
+2021-08-06 10:58:17.442 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 4, follow
+2021-08-06 10:58:17.442 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:17.442 [93584] main/122/rwbell I> RO vclock:{"0":2,"1":213} election:{"state":"follower","vote":0,"leader":0,"term":4} (was rw:9.25s
+2021-08-06 10:58:17.442 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 4, vote: 2, state: leader} from 2
+2021-08-06 10:58:17.442 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:17.442 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:58:17.442 [93584] main/113/raft_worker I> RAFT: persisted state {term: 4}
+2021-08-06 10:58:17.443 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 4, state: follower} from 1
+2021-08-06 10:58:17.443 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 4, state: follower} from 1
+2021-08-06 10:58:17.443 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 4, vote: 2, state: follower} from 3
+2021-08-06 10:58:17.443 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:58:17.443 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 4, vote: 2, state: leader} from 2
+2021-08-06 10:58:17.443 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 2
+127.0.0.1:3301 became ro
+127.0.0.1:3301 not rw anymore
+2021-08-06 10:58:17.443 [93585] relay/[::ffff:127.0.0.1]:56754/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:17.443 [93586] relay/[::ffff:127.0.0.1]:56753/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:58:17.443 [93584] main/130/applierw/127.0.0.1:3302 C> leaving orphan mode
+2021-08-06 10:58:17.444 [93584] main/129/applierw/127.0.0.1:3303 C> leaving orphan mode
+Waiting for master for 10.000s
+Timeout exceeded
+Waiting for master for 10.000s
+2021-08-06 10:58:33.997 [93586] main I> RAFT: begin new election round
+2021-08-06 10:58:33.997 [93586] main I> RAFT: bump term to 5, follow
+2021-08-06 10:58:33.997 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:58:33.997 [93586] main/111/applier/127.0.0.1:3302 I> can't read row
+2021-08-06 10:58:33.997 [93586] main/111/applier/127.0.0.1:3302 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:33.997 [93586] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:33.997 [93586] main/113/raft_worker I> RAFT: persisted state {term: 5, vote: 3}
+2021-08-06 10:58:33.997 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:33.997 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 5, vote: 3, state: candidate, vclock: {1: 198, 2: 1}} from 3
+2021-08-06 10:58:33.997 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 5, follow
+2021-08-06 10:58:33.997 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:33.998 [93586] relay/[::ffff:127.0.0.1]:56740/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:33.998 [93586] relay/[::ffff:127.0.0.1]:56740/101/main C> exiting the relay loop
+2021-08-06 10:58:33.998 [93584] main/113/raft_worker I> RAFT: persisted state {term: 5}
+2021-08-06 10:58:33.998 [93584] main/113/raft_worker I> RAFT: vote for 1, follow
+2021-08-06 10:58:33.998 [93584] main/113/raft_worker I> RAFT: persisted state {term: 5, vote: 1}
+2021-08-06 10:58:33.998 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:33.998 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 5, state: follower} from 1
+2021-08-06 10:58:33.998 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 5, vote: 1, state: candidate, vclock: {1: 213, 2: 1}} from 1
+2021-08-06 10:58:33.998 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:34.017 [93584] main/111/applier/127.0.0.1:3302 I> can't read row
+2021-08-06 10:58:34.017 [93584] main/111/applier/127.0.0.1:3302 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:34.017 [93584] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:34.019 [93584] relay/[::ffff:127.0.0.1]:56752/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:34.019 [93584] relay/[::ffff:127.0.0.1]:56752/101/main C> exiting the relay loop
+2021-08-06 10:58:34.202 [93585] main/112/applier/127.0.0.1:3303 I> can't read row
+2021-08-06 10:58:34.202 [93585] main/112/applier/127.0.0.1:3303 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:34.202 [93585] main/112/applier/127.0.0.1:3303 I> will retry every 0.50 second
+2021-08-06 10:58:34.203 [93585] main/110/applier/127.0.0.1:3301 I> can't read row
+2021-08-06 10:58:34.203 [93585] main/110/applier/127.0.0.1:3301 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:34.203 [93585] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+2021-08-06 10:58:34.204 [93585] relay/[::ffff:127.0.0.1]:56754/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:34.204 [93585] relay/[::ffff:127.0.0.1]:56754/101/main C> exiting the relay loop
+2021-08-06 10:58:34.204 [93585] relay/[::ffff:127.0.0.1]:56739/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:34.204 [93585] relay/[::ffff:127.0.0.1]:56739/101/main C> exiting the relay loop
+2021-08-06 10:58:34.499 [93585] main/124/main I> subscribed replica aaaaaaaa-0003-0000-0000-000000000001 at fd 17, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56777
+2021-08-06 10:58:34.499 [93585] main/124/main I> remote vclock {1: 198, 2: 1} local vclock {0: 3, 1: 198, 2: 1}
+2021-08-06 10:58:34.499 [93586] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:34.499 [93586] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 198, 2: 1} local vclock {0: 4, 1: 198, 2: 1}
+2021-08-06 10:58:34.499 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 4, vote: 2, state: leader} from 2
+2021-08-06 10:58:34.499 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: the message is ignored due to outdated term - current term is 5
+2021-08-06 10:58:34.500 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:34.501 [93586] main/128/applierw/127.0.0.1:3302 C> leaving orphan mode
+2021-08-06 10:58:34.521 [93584] main I> RAFT: begin new election round
+2021-08-06 10:58:34.521 [93584] main I> RAFT: bump term to 6, follow
+2021-08-06 10:58:34.521 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:58:34.521 [93584] main/113/raft_worker I> RAFT: persisted state {term: 6, vote: 1}
+2021-08-06 10:58:34.522 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:34.522 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 6, vote: 1, state: candidate, vclock: {1: 213, 2: 1}} from 1
+2021-08-06 10:58:34.522 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 6, follow
+2021-08-06 10:58:34.522 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote for 1, follow
+2021-08-06 10:58:34.522 [93585] main/128/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 21, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56778
+2021-08-06 10:58:34.522 [93584] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:34.522 [93585] main/128/main I> remote vclock {1: 213, 2: 1} local vclock {0: 3, 1: 198, 2: 1}
+2021-08-06 10:58:34.522 [93584] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 198, 2: 1} local vclock {0: 6, 1: 213, 2: 1}
+2021-08-06 10:58:34.522 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 4, vote: 2, state: leader} from 2
+2021-08-06 10:58:34.522 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: the message is ignored due to outdated term - current term is 6
+2021-08-06 10:58:34.522 [93586] main/113/raft_worker I> RAFT: persisted state {term: 6, vote: 1}
+2021-08-06 10:58:34.523 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 6, vote: 1, state: follower} from 3
+2021-08-06 10:58:34.523 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:58:34.523 [93584] main/122/rwbell I> RW vclock:{"0":6,"1":213,"2":1} election:{"state":"leader","vote":1,"leader":1,"term":6} (was ro:17.08s)
+2021-08-06 10:58:34.523 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 6, vote: 1, state: leader} from 1
+2021-08-06 10:58:34.523 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:34.523 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: leader is 1, follow
+2021-08-06 10:58:34.524 [93585] relay/[::ffff:127.0.0.1]:56778/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:34.524 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 6, vote: 1, state: follower} from 3
+2021-08-06 10:58:34.524 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 1
+2021-08-06 10:58:34.524 [93584] relay/[::ffff:127.0.0.1]:56751/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:34.524 [93584] main/131/applierw/127.0.0.1:3302 C> leaving orphan mode
+2021-08-06 10:58:34.525 [93586] main/127/applierw/127.0.0.1:3301 C> leaving orphan mode
+127.0.0.1:3301 became rw
+127.0.0.1:3301 not ro anymore
+Master discovered: 127.0.0.1:3301 (aaaaaaaa-0001-0000-0000-000000000001) in 7.085s
+DDL complete on 1/{"0":6,"1":214,"2":1}
+{"version":"2.7.2-0-g4d8c068","id":1,"ro":false,"uuid":"aaaaaaaa-0001-0000-0000-000000000001","package":"Tarantool","cluster":{"uuid":"f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8"},"listen":"[::]:3301","replication_anon":{"count":0},"replication":{"1":{"lsn":214,"uuid":"aaaaaaaa-0001-0000-0000-000000000001","id":1},"2":{"lsn":1,"id":2,"upstream":{"status":"follow","idle":0.014215999981388,"peer":"127.0.0.1:3302","lag":0.0010268688201904},"uuid":"aaaaaaaa-0002-0000-0000-000000000001","downstream":{"status":"stopped","message":"timed out","system_message":"Operation timed out"}},"3":{"lsn":0,"id":3,"upstream":{"status":"follow","idle":0.014741000020877,"peer":"127.0.0.1:3303","lag":1628236714.5235},"uuid":"aaaaaaaa-0003-0000-0000-000000000001","downstream":{"status":"follow","idle":0.015390999964438,"vclock":{"1":214,"2":1}}}},"election":{"state":"leader","vote":1,"term":6,"leader":1},"signature":221,"status":"running","vclock":{"0":6,"1":214,"2":1},"uptime":27,"lsn":214,"gc":[],"vinyl":[],"memory":[],"sql":[]}
+2021-08-06 10:58:34.705 [93586] main/109/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 24, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56779
+2021-08-06 10:58:34.705 [93584] main/109/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 21, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56780
+2021-08-06 10:58:34.705 [93586] main/109/main I> remote vclock {1: 198, 2: 1} local vclock {0: 5, 1: 219, 2: 1}
+2021-08-06 10:58:34.705 [93584] main/109/main I> remote vclock {1: 198, 2: 1} local vclock {0: 6, 1: 219, 2: 1}
+2021-08-06 10:58:34.705 [93585] main/112/applier/127.0.0.1:3303 I> subscribed
+2021-08-06 10:58:34.705 [93585] main/112/applier/127.0.0.1:3303 I> remote vclock {1: 219, 2: 1} local vclock {0: 3, 1: 198, 2: 1}
+2021-08-06 10:58:34.705 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 6, vote: 1, state: follower} from 3
+2021-08-06 10:58:34.705 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 6, follow
+2021-08-06 10:58:34.705 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:34.705 [93585] main/127/rwbell I> RO vclock:{"0":3,"1":198,"2":1} election:{"state":"follower","vote":0,"leader":0,"term":6} (was rw:17.29s
+2021-08-06 10:58:34.705 [93585] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:34.705 [93585] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 219, 2: 1} local vclock {0: 3, 1: 198, 2: 1}
+2021-08-06 10:58:34.705 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 6, vote: 1, state: leader} from 1
+2021-08-06 10:58:34.705 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:34.705 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: leader is 1, follow
+2021-08-06 10:58:34.705 [93585] main/113/raft_worker I> RAFT: persisted state {term: 6}
+2021-08-06 10:58:34.706 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 6, state: follower} from 2
+2021-08-06 10:58:34.706 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 6, state: follower} from 2
+2021-08-06 10:58:34.706 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 6, vote: 1, state: follower} from 3
+2021-08-06 10:58:34.706 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 1
+2021-08-06 10:58:34.706 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 6, vote: 1, state: leader} from 1
+2021-08-06 10:58:34.706 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 1
+2021-08-06 10:58:34.707 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:58:34.707 [93584] relay/[::ffff:127.0.0.1]:56780/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:34.709 [93585] main/135/applierw/127.0.0.1:3301 C> leaving orphan mode
+2021-08-06 10:58:34.709 [93585] main/134/applierw/127.0.0.1:3303 C> leaving orphan mode
+2021-08-06 10:58:55.105 [93586] relay/[::ffff:127.0.0.1]:56753/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.105 [93586] relay/[::ffff:127.0.0.1]:56753/101/main C> exiting the relay loop
+2021-08-06 10:58:55.270 [93585] relay/[::ffff:127.0.0.1]:56778/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.270 [93585] relay/[::ffff:127.0.0.1]:56778/101/main C> exiting the relay loop
+2021-08-06 10:58:55.437 [93585] main I> RAFT: begin new election round
+2021-08-06 10:58:55.437 [93585] main I> RAFT: bump term to 7, follow
+2021-08-06 10:58:55.437 [93586] main I> RAFT: begin new election round
+2021-08-06 10:58:55.437 [93586] main I> RAFT: bump term to 7, follow
+2021-08-06 10:58:55.437 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:58:55.437 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:58:55.437 [93586] main/110/applier/127.0.0.1:3301 I> can't read row
+2021-08-06 10:58:55.437 [93586] main/110/applier/127.0.0.1:3301 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.437 [93586] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+2021-08-06 10:58:55.437 [93585] main/110/applier/127.0.0.1:3301 I> can't read row
+2021-08-06 10:58:55.437 [93585] main/110/applier/127.0.0.1:3301 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.437 [93585] main/110/applier/127.0.0.1:3301 I> will retry every 0.50 second
+2021-08-06 10:58:55.437 [93585] main/113/raft_worker I> RAFT: persisted state {term: 7, vote: 2}
+2021-08-06 10:58:55.437 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:55.438 [93586] main/113/raft_worker I> RAFT: persisted state {term: 7, vote: 3}
+2021-08-06 10:58:55.438 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:55.438 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 7, vote: 3, state: candidate, vclock: {1: 775, 2: 1}} from 3
+2021-08-06 10:58:55.438 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.438 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 7, vote: 2, state: candidate, vclock: {1: 775, 2: 1}} from 2
+2021-08-06 10:58:55.438 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.443 [93584] main/112/applier/127.0.0.1:3303 I> can't read row
+2021-08-06 10:58:55.443 [93584] main/112/applier/127.0.0.1:3303 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.443 [93584] main/112/applier/127.0.0.1:3303 I> will retry every 0.50 second
+2021-08-06 10:58:55.443 [93584] main/111/applier/127.0.0.1:3302 I> can't read row
+2021-08-06 10:58:55.443 [93584] main/111/applier/127.0.0.1:3302 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.443 [93584] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:55.444 [93584] relay/[::ffff:127.0.0.1]:56751/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.444 [93584] relay/[::ffff:127.0.0.1]:56780/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:55.445 [93584] relay/[::ffff:127.0.0.1]:56780/101/main C> exiting the relay loop
+2021-08-06 10:58:55.444 [93584] relay/[::ffff:127.0.0.1]:56751/101/main C> exiting the relay loop
+2021-08-06 10:58:55.943 [93584] main/109/main I> subscribed replica aaaaaaaa-0003-0000-0000-000000000001 at fd 18, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56810
+2021-08-06 10:58:55.943 [93584] main/109/main I> remote vclock {1: 775, 2: 1} local vclock {0: 6, 1: 790, 2: 1}
+2021-08-06 10:58:55.943 [93586] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:55.943 [93586] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 790, 2: 1} local vclock {0: 6, 1: 775, 2: 1}
+2021-08-06 10:58:55.943 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 6, vote: 1, state: leader} from 1
+2021-08-06 10:58:55.943 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: the message is ignored due to outdated term - current term is 7
+2021-08-06 10:58:55.944 [93584] main/123/main I> subscribed replica aaaaaaaa-0002-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3301, peer of [::ffff:127.0.0.1]:56811
+2021-08-06 10:58:55.944 [93585] main/110/applier/127.0.0.1:3301 I> subscribed
+2021-08-06 10:58:55.944 [93584] main/123/main I> remote vclock {1: 775, 2: 1} local vclock {0: 6, 1: 790, 2: 1}
+2021-08-06 10:58:55.944 [93585] main/110/applier/127.0.0.1:3301 I> remote vclock {1: 790, 2: 1} local vclock {0: 5, 1: 775, 2: 1}
+2021-08-06 10:58:55.945 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 6, vote: 1, state: leader} from 1
+2021-08-06 10:58:55.945 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: the message is ignored due to outdated term - current term is 7
+2021-08-06 10:58:55.945 [93584] relay/[::ffff:127.0.0.1]:56810/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:55.946 [93585] main/128/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 22, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56813
+2021-08-06 10:58:55.946 [93584] main/112/applier/127.0.0.1:3303 I> subscribed
+2021-08-06 10:58:55.946 [93585] main/128/main I> remote vclock {1: 790, 2: 1} local vclock {0: 5, 1: 775, 2: 1}
+2021-08-06 10:58:55.946 [93584] main/112/applier/127.0.0.1:3303 I> remote vclock {1: 775, 2: 1} local vclock {0: 6, 1: 790, 2: 1}
+2021-08-06 10:58:55.946 [93584] relay/[::ffff:127.0.0.1]:56811/101/main I> recover from `.tnt/tnt1/00000000000000000000.xlog'
+2021-08-06 10:58:55.946 [93586] main/115/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 19, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56812
+2021-08-06 10:58:55.946 [93586] main/115/main I> remote vclock {1: 790, 2: 1} local vclock {0: 6, 1: 775, 2: 1}
+2021-08-06 10:58:55.946 [93584] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:55.946 [93584] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 775, 2: 1} local vclock {0: 6, 1: 790, 2: 1}
+2021-08-06 10:58:55.946 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 7, vote: 2, state: candidate, vclock: {1: 775, 2: 1}} from 2
+2021-08-06 10:58:55.946 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 7, follow
+2021-08-06 10:58:55.946 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:55.946 [93584] main/122/rwbell I> RO vclock:{"0":6,"1":790,"2":1} election:{"state":"follower","vote":0,"leader":0,"term":7} (was rw:21.42s
+2021-08-06 10:58:55.946 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 7, vote: 3, state: candidate, vclock: {1: 775, 2: 1}} from 3
+2021-08-06 10:58:55.946 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:55.947 [93584] main/113/raft_worker I> RAFT: persisted state {term: 7}
+2021-08-06 10:58:55.947 [93584] main/113/raft_worker I> RAFT: vote for 1, follow
+2021-08-06 10:58:55.947 [93584] main/113/raft_worker I> RAFT: persisted state {term: 7, vote: 1}
+2021-08-06 10:58:55.947 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:55.947 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 7, state: follower} from 1
+2021-08-06 10:58:55.947 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 7, vote: 2, state: candidate, vclock: {1: 775, 2: 1}} from 2
+2021-08-06 10:58:55.947 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.947 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 7, state: follower} from 1
+2021-08-06 10:58:55.947 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 7, vote: 3, state: candidate, vclock: {1: 775, 2: 1}} from 3
+2021-08-06 10:58:55.947 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.947 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 7, vote: 1, state: candidate, vclock: {1: 790, 2: 1}} from 1
+2021-08-06 10:58:55.947 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.947 [93586] relay/[::ffff:127.0.0.1]:56812/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:58:55.948 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 7, vote: 1, state: candidate, vclock: {1: 790, 2: 1}} from 1
+2021-08-06 10:58:55.948 [93585] relay/[::ffff:127.0.0.1]:56813/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:55.948 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.948 [93584] main/134/applierw/127.0.0.1:3303 C> leaving orphan mode
+2021-08-06 10:58:55.948 [93584] main/135/applierw/127.0.0.1:3302 C> leaving orphan mode
+127.0.0.1:3301 became ro
+127.0.0.1:3301 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:58:55.961 [93586] main I> RAFT: begin new election round
+2021-08-06 10:58:55.961 [93586] main I> RAFT: bump term to 8, follow
+2021-08-06 10:58:55.961 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:58:55.961 [93586] main/113/raft_worker I> RAFT: persisted state {term: 8, vote: 3}
+2021-08-06 10:58:55.961 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:55.961 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 8, vote: 3, state: candidate, vclock: {1: 775, 2: 1}} from 3
+2021-08-06 10:58:55.961 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 8, vote: 3, state: candidate, vclock: {1: 775, 2: 1}} from 3
+2021-08-06 10:58:55.961 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 8, follow
+2021-08-06 10:58:55.961 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 8, follow
+2021-08-06 10:58:55.961 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:55.961 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:58:55.961 [93585] main/113/raft_worker I> RAFT: persisted state {term: 8, vote: 3}
+2021-08-06 10:58:55.961 [93584] main/113/raft_worker I> RAFT: persisted state {term: 8}
+2021-08-06 10:58:55.961 [93584] main/113/raft_worker I> RAFT: vote for 1, follow
+2021-08-06 10:58:55.962 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 8, state: follower} from 1
+2021-08-06 10:58:55.962 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 8, vote: 3, state: follower} from 2
+2021-08-06 10:58:55.962 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:55.962 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 8, state: follower} from 1
+2021-08-06 10:58:55.962 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 8, vote: 3, state: follower} from 2
+2021-08-06 10:58:55.962 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:58:55.962 [93584] main/113/raft_worker I> RAFT: persisted state {term: 8, vote: 1}
+2021-08-06 10:58:55.962 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:55.962 [93586] main/126/rwbell I> RW vclock:{"0":7,"1":775,"2":1} election:{"state":"leader","vote":3,"leader":3,"term":8} (was ro:44.25s)
+2021-08-06 10:58:55.962 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 8, vote: 1, state: candidate, vclock: {1: 790, 2: 1}} from 1
+2021-08-06 10:58:55.962 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:58:55.962 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 8, vote: 1, state: candidate, vclock: {1: 790, 2: 1}} from 1
+2021-08-06 10:58:55.962 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - already voted in this term
+2021-08-06 10:58:55.962 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 8, vote: 3, state: leader} from 3
+2021-08-06 10:58:55.962 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:55.962 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 8, vote: 3, state: leader} from 3
+2021-08-06 10:58:55.962 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:58:55.962 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:55.962 [93584] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:58:55.962 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 8, vote: 1, state: follower} from 1
+2021-08-06 10:58:55.962 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 8, vote: 3, state: follower} from 2
+2021-08-06 10:58:55.962 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 8, vote: 3, state: follower} from 2
+2021-08-06 10:58:55.962 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:58:55.962 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:58:55.962 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 8, vote: 1, state: follower} from 1
+2021-08-06 10:58:55.962 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:58:55.962 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:58:55.962 [93586] relay/[::ffff:127.0.0.1]:56812/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:58:55.962 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 0.102s
+2021-08-06 10:58:56.059 [93584] main/112/applier/127.0.0.1:3303 applier.cc:298 E> error applying row: {type: 'INSERT', replica_id: 3, lsn: 2, space_id: 512, index_id: 0, tuple: [767, {0: 7, 1: 775, 2: 1, 3: 1}, {"state": "leader", "vote": 3, "leader": 3, "term": 8}, 1.62824e+09]}
+2021-08-06 10:58:56.059 [93584] main/112/applier/127.0.0.1:3303 I> can't read row
+2021-08-06 10:58:56.059 [93584] main/112/applier/127.0.0.1:3303 memtx_tree.cc:859 E> ER_TUPLE_FOUND: Duplicate key exists in unique index 'pri' in space 'test'
+2021-08-06 10:58:56.060 [93586] relay/[::ffff:127.0.0.1]:56812/101/main coio.cc:379 !> SystemError unexpected EOF when reading from socket, called on fd 19, aka [::ffff:127.0.0.1]:3303, peer of [::ffff:127.0.0.1]:56812: Broken pipe
+2021-08-06 10:58:56.060 [93586] relay/[::ffff:127.0.0.1]:56812/101/main C> exiting the relay loop
+2021-08-06 10:58:57.964 [93585] relay/[::ffff:127.0.0.1]:56813/101/main coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:57.964 [93585] relay/[::ffff:127.0.0.1]:56813/101/main C> exiting the relay loop
+2021-08-06 10:58:57.964 [93584] main/111/applier/127.0.0.1:3302 I> can't read row
+2021-08-06 10:58:57.964 [93584] main/111/applier/127.0.0.1:3302 coio.cc:340 !> SystemError timed out: Operation timed out
+2021-08-06 10:58:57.964 [93584] main/111/applier/127.0.0.1:3302 I> will retry every 0.50 second
+2021-08-06 10:58:58.059 [93584] main I> RAFT: begin new election round
+2021-08-06 10:58:58.059 [93584] main I> RAFT: bump term to 9, follow
+2021-08-06 10:58:58.059 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:58:58.060 [93584] main/113/raft_worker I> RAFT: persisted state {term: 9, vote: 1}
+2021-08-06 10:58:58.060 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:58.060 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 9, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:58:58.060 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 9, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:58:58.060 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 9, follow
+2021-08-06 10:58:58.060 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 9, follow
+2021-08-06 10:58:58.060 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:58.060 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:58.061 [93586] main/126/rwbell I> RO vclock:{"0":7,"1":775,"2":1,"3":60} election:{"state":"follower","vote":0,"leader":0,"term":9} (was rw:2.10s
+2021-08-06 10:58:58.061 [93585] main/113/raft_worker I> RAFT: persisted state {term: 9}
+2021-08-06 10:58:58.061 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:58:58.061 [93586] main/113/raft_worker I> RAFT: persisted state {term: 9}
+2021-08-06 10:58:58.061 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:58:58.061 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 9, state: follower} from 2
+2021-08-06 10:58:58.061 [93586] main/113/raft_worker I> RAFT: persisted state {term: 9, vote: 3}
+2021-08-06 10:58:58.061 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:58.061 [93585] main/113/raft_worker I> RAFT: persisted state {term: 9, vote: 2}
+2021-08-06 10:58:58.061 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:58.061 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 9, state: follower} from 3
+2021-08-06 10:58:58.061 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 9, vote: 3, state: candidate, vclock: {1: 775, 2: 1, 3: 60}} from 3
+2021-08-06 10:58:58.061 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 9, vote: 2, state: candidate, vclock: {1: 775, 2: 1, 3: 60}} from 2
+2021-08-06 10:58:58.061 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:58.061 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:58:58.470 [93585] main/136/main I> subscribed replica aaaaaaaa-0001-0000-0000-000000000001 at fd 22, aka [::ffff:127.0.0.1]:3302, peer of [::ffff:127.0.0.1]:56817
+2021-08-06 10:58:58.470 [93585] main/136/main I> remote vclock {1: 790, 2: 1, 3: 1} local vclock {0: 8, 1: 775, 2: 1, 3: 60}
+2021-08-06 10:58:58.470 [93584] main/111/applier/127.0.0.1:3302 I> subscribed
+2021-08-06 10:58:58.470 [93584] main/111/applier/127.0.0.1:3302 I> remote vclock {1: 775, 2: 1, 3: 60} local vclock {0: 11, 1: 790, 2: 1, 3: 1}
+2021-08-06 10:58:58.470 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 9, vote: 2, state: candidate, vclock: {1: 775, 2: 1, 3: 60}} from 2
+2021-08-06 10:58:58.470 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:58.471 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 9, vote: 2, state: candidate, vclock: {1: 775, 2: 1, 3: 60}} from 2
+2021-08-06 10:58:58.471 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:58.472 [93585] relay/[::ffff:127.0.0.1]:56817/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:58.571 [93585] main I> RAFT: begin new election round
+2021-08-06 10:58:58.571 [93585] main I> RAFT: bump term to 10, follow
+2021-08-06 10:58:58.571 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:58:58.571 [93585] main/113/raft_worker I> RAFT: persisted state {term: 10, vote: 2}
+2021-08-06 10:58:58.571 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:58.572 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 10, vote: 2, state: candidate, vclock: {1: 775, 2: 1, 3: 60}} from 2
+2021-08-06 10:58:58.572 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 10, follow
+2021-08-06 10:58:58.572 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:58:58.572 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 10, vote: 2, state: candidate, vclock: {1: 775, 2: 1, 3: 60}} from 2
+2021-08-06 10:58:58.572 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 10, follow
+2021-08-06 10:58:58.572 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:58:58.572 [93584] main/113/raft_worker I> RAFT: persisted state {term: 10}
+2021-08-06 10:58:58.572 [93586] main/113/raft_worker I> RAFT: persisted state {term: 10, vote: 2}
+2021-08-06 10:58:58.572 [93584] main/113/raft_worker I> RAFT: vote for 1, follow
+2021-08-06 10:58:58.573 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 10, state: follower} from 1
+2021-08-06 10:58:58.573 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 10, state: follower} from 1
+2021-08-06 10:58:58.573 [93584] main/113/raft_worker I> RAFT: persisted state {term: 10, vote: 1}
+2021-08-06 10:58:58.573 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:58:58.573 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 10, vote: 2, state: follower} from 3
+2021-08-06 10:58:58.573 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:58:58.573 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 10, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:58:58.573 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - already voted in this term
+2021-08-06 10:58:58.573 [93585] main/127/rwbell I> RW vclock:{"0":9,"1":775,"2":1,"3":60} election:{"state":"leader","vote":2,"leader":2,"term":10} (was ro:23.87s)
+2021-08-06 10:58:58.573 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 10, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:58:58.573 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:58:58.573 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 10, vote: 2, state: leader} from 2
+2021-08-06 10:58:58.574 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:58:58.574 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:58:58.574 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 10, vote: 2, state: leader} from 2
+2021-08-06 10:58:58.574 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:58:58.574 [93584] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:58:58.574 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 10, vote: 2, state: follower} from 3
+2021-08-06 10:58:58.574 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:58:58.574 [93585] relay/[::ffff:127.0.0.1]:56817/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:58.574 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:58:58.574 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 10, vote: 1, state: follower} from 1
+2021-08-06 10:58:58.574 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 10, vote: 1, state: follower} from 1
+2021-08-06 10:58:58.574 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:58:58.574 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:58:58.575 [93584] main/111/applier/127.0.0.1:3302 applier.cc:298 E> error applying row: {type: 'INSERT', replica_id: 3, lsn: 2, space_id: 512, index_id: 0, tuple: [767, {0: 7, 1: 775, 2: 1, 3: 1}, {"state": "leader", "vote": 3, "leader": 3, "term": 8}, 1.62824e+09]}
+2021-08-06 10:58:58.576 [93584] main/111/applier/127.0.0.1:3302 I> can't read row
+2021-08-06 10:58:58.576 [93584] main/111/applier/127.0.0.1:3302 memtx_tree.cc:859 E> ER_TUPLE_FOUND: Duplicate key exists in unique index 'pri' in space 'test'
+2021-08-06 10:58:58.576 [93585] relay/[::ffff:127.0.0.1]:56817/101/main sio.c:284 !> SystemError writev(2), called on fd 22, aka [::127.0.0.1]:3302: Broken pipe
+2021-08-06 10:58:58.576 [93585] relay/[::ffff:127.0.0.1]:56817/101/main C> exiting the relay loop
+2021-08-06 10:59:00.583 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:00.583 [93584] main I> RAFT: bump term to 11, follow
+2021-08-06 10:59:00.583 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:00.583 [93584] main/113/raft_worker I> RAFT: persisted state {term: 11, vote: 1}
+2021-08-06 10:59:00.583 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:00.583 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 11, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:00.583 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 11, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:00.583 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 11, follow
+2021-08-06 10:59:00.583 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 11, follow
+2021-08-06 10:59:00.583 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:00.583 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:00.584 [93585] main/127/rwbell I> RO vclock:{"0":9,"1":775,"2":2,"3":60} election:{"state":"follower","vote":0,"leader":0,"term":11} (was rw:2.01s
+2021-08-06 10:59:00.584 [93586] main/113/raft_worker I> RAFT: persisted state {term: 11}
+2021-08-06 10:59:00.584 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:00.584 [93585] main/113/raft_worker I> RAFT: persisted state {term: 11}
+2021-08-06 10:59:00.584 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:00.584 [93586] main/113/raft_worker I> RAFT: persisted state {term: 11, vote: 3}
+2021-08-06 10:59:00.584 [93585] main/113/raft_worker I> RAFT: persisted state {term: 11, vote: 2}
+2021-08-06 10:59:00.584 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:00.584 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:00.584 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 11, state: follower} from 3
+2021-08-06 10:59:00.584 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 11, state: follower} from 2
+2021-08-06 10:59:00.585 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 11, vote: 2, state: candidate, vclock: {1: 775, 2: 2, 3: 60}} from 2
+2021-08-06 10:59:00.585 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:00.585 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 11, vote: 3, state: candidate, vclock: {1: 775, 2: 2, 3: 60}} from 3
+2021-08-06 10:59:00.585 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:01.090 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:01.090 [93584] main I> RAFT: bump term to 12, follow
+2021-08-06 10:59:01.090 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:01.091 [93584] main/113/raft_worker I> RAFT: persisted state {term: 12, vote: 1}
+2021-08-06 10:59:01.091 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:01.091 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 12, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:01.091 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 12, follow
+2021-08-06 10:59:01.091 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 12, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:01.091 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:01.091 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 12, follow
+2021-08-06 10:59:01.091 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:01.091 [93586] main/113/raft_worker I> RAFT: persisted state {term: 12}
+2021-08-06 10:59:01.092 [93585] main/113/raft_worker I> RAFT: persisted state {term: 12}
+2021-08-06 10:59:01.092 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:01.092 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:01.092 [93586] main/113/raft_worker I> RAFT: persisted state {term: 12, vote: 3}
+2021-08-06 10:59:01.092 [93585] main/113/raft_worker I> RAFT: persisted state {term: 12, vote: 2}
+2021-08-06 10:59:01.092 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:01.092 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:01.092 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 12, state: follower} from 3
+2021-08-06 10:59:01.092 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 12, state: follower} from 2
+2021-08-06 10:59:01.092 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 12, vote: 3, state: candidate, vclock: {1: 775, 2: 2, 3: 60}} from 3
+2021-08-06 10:59:01.092 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 12, vote: 2, state: candidate, vclock: {1: 775, 2: 2, 3: 60}} from 2
+2021-08-06 10:59:01.092 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:01.092 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:01.610 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:01.610 [93585] main I> RAFT: bump term to 13, follow
+2021-08-06 10:59:01.610 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:01.610 [93585] main/113/raft_worker I> RAFT: persisted state {term: 13, vote: 2}
+2021-08-06 10:59:01.610 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:01.611 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 13, vote: 2, state: candidate, vclock: {1: 775, 2: 2, 3: 60}} from 2
+2021-08-06 10:59:01.611 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 13, follow
+2021-08-06 10:59:01.611 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:01.611 [93586] main/113/raft_worker I> RAFT: persisted state {term: 13, vote: 2}
+2021-08-06 10:59:01.611 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 13, vote: 2, state: follower} from 3
+2021-08-06 10:59:01.611 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:01.611 [93585] main/127/rwbell I> RW vclock:{"0":14,"1":775,"2":2,"3":60} election:{"state":"leader","vote":2,"leader":2,"term":13} (was ro:1.03s)
+2021-08-06 10:59:01.611 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 13, vote: 2, state: leader} from 2
+2021-08-06 10:59:01.611 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:01.611 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:01.612 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 13, vote: 2, state: follower} from 3
+2021-08-06 10:59:01.612 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:01.612 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:01.624 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:01.624 [93584] main I> RAFT: bump term to 13, follow
+2021-08-06 10:59:01.624 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:01.624 [93584] main/113/raft_worker I> RAFT: persisted state {term: 13, vote: 1}
+2021-08-06 10:59:01.624 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:01.624 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 13, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:01.624 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:01.624 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 13, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:01.624 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:02.172 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:02.172 [93584] main I> RAFT: bump term to 14, follow
+2021-08-06 10:59:02.172 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:02.172 [93584] main/113/raft_worker I> RAFT: persisted state {term: 14, vote: 1}
+2021-08-06 10:59:02.172 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:02.173 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 14, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:02.173 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 14, follow
+2021-08-06 10:59:02.173 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 14, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:02.173 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:02.173 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 14, follow
+2021-08-06 10:59:02.173 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:02.173 [93585] main/127/rwbell I> RO vclock:{"0":14,"1":775,"2":3,"3":60} election:{"state":"follower","vote":0,"leader":0,"term":14} (was rw:0.56s
+2021-08-06 10:59:02.173 [93586] main/113/raft_worker I> RAFT: persisted state {term: 14}
+2021-08-06 10:59:02.173 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:02.173 [93585] main/113/raft_worker I> RAFT: persisted state {term: 14}
+2021-08-06 10:59:02.173 [93586] main/113/raft_worker I> RAFT: persisted state {term: 14, vote: 3}
+2021-08-06 10:59:02.173 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:02.173 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:02.173 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 14, state: follower} from 3
+2021-08-06 10:59:02.174 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 14, state: follower} from 2
+2021-08-06 10:59:02.174 [93585] main/113/raft_worker I> RAFT: persisted state {term: 14, vote: 2}
+2021-08-06 10:59:02.174 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:02.174 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 14, vote: 3, state: candidate, vclock: {1: 775, 2: 3, 3: 60}} from 3
+2021-08-06 10:59:02.174 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:02.174 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 14, vote: 2, state: candidate, vclock: {1: 775, 2: 3, 3: 60}} from 2
+2021-08-06 10:59:02.174 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:02.685 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:02.685 [93584] main I> RAFT: bump term to 15, follow
+2021-08-06 10:59:02.685 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:02.685 [93584] main/113/raft_worker I> RAFT: persisted state {term: 15, vote: 1}
+2021-08-06 10:59:02.686 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:02.686 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 15, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:02.686 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 15, follow
+2021-08-06 10:59:02.686 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:02.686 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 15, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:02.686 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 15, follow
+2021-08-06 10:59:02.686 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:02.687 [93585] main/113/raft_worker I> RAFT: persisted state {term: 15}
+2021-08-06 10:59:02.687 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:02.687 [93586] main/113/raft_worker I> RAFT: persisted state {term: 15}
+2021-08-06 10:59:02.687 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:02.687 [93585] main/113/raft_worker I> RAFT: persisted state {term: 15, vote: 2}
+2021-08-06 10:59:02.687 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 15, state: follower} from 2
+2021-08-06 10:59:02.687 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:02.687 [93586] main/113/raft_worker I> RAFT: persisted state {term: 15, vote: 3}
+2021-08-06 10:59:02.687 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:02.687 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 15, vote: 2, state: candidate, vclock: {1: 775, 2: 3, 3: 60}} from 2
+2021-08-06 10:59:02.687 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:02.687 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 15, state: follower} from 3
+2021-08-06 10:59:02.688 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 15, vote: 3, state: candidate, vclock: {1: 775, 2: 3, 3: 60}} from 3
+2021-08-06 10:59:02.688 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:03.196 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:03.197 [93586] main I> RAFT: bump term to 16, follow
+2021-08-06 10:59:03.197 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:03.197 [93586] main/113/raft_worker I> RAFT: persisted state {term: 16, vote: 3}
+2021-08-06 10:59:03.197 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:03.197 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 16, vote: 3, state: candidate, vclock: {1: 775, 2: 3, 3: 60}} from 3
+2021-08-06 10:59:03.197 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 16, follow
+2021-08-06 10:59:03.197 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:59:03.197 [93585] main/113/raft_worker I> RAFT: persisted state {term: 16, vote: 3}
+2021-08-06 10:59:03.198 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 16, vote: 3, state: follower} from 2
+2021-08-06 10:59:03.198 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:03.198 [93586] main/126/rwbell I> RW vclock:{"0":20,"1":775,"2":3,"3":60} election:{"state":"leader","vote":3,"leader":3,"term":16} (was ro:5.14s)
+2021-08-06 10:59:03.198 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 16, vote: 3, state: leader} from 3
+2021-08-06 10:59:03.198 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:03.198 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:59:03.199 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 16, vote: 3, state: follower} from 2
+2021-08-06 10:59:03.199 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:03.199 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:59:03.200 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:03.200 [93584] main I> RAFT: bump term to 16, follow
+2021-08-06 10:59:03.200 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:03.200 [93584] main/113/raft_worker I> RAFT: persisted state {term: 16, vote: 1}
+2021-08-06 10:59:03.200 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:03.201 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 16, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:03.201 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:03.201 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 16, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:03.201 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 5.207s
+2021-08-06 10:59:03.745 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:03.746 [93584] main I> RAFT: bump term to 17, follow
+2021-08-06 10:59:03.746 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:03.746 [93584] main/113/raft_worker I> RAFT: persisted state {term: 17, vote: 1}
+2021-08-06 10:59:03.746 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:03.746 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 17, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:03.746 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 17, follow
+2021-08-06 10:59:03.746 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:03.746 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 17, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:03.746 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 17, follow
+2021-08-06 10:59:03.746 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:03.747 [93586] main/126/rwbell I> RO vclock:{"0":20,"1":775,"2":3,"3":75} election:{"state":"follower","vote":0,"leader":0,"term":17} (was rw:0.55s
+2021-08-06 10:59:03.747 [93585] main/113/raft_worker I> RAFT: persisted state {term: 17}
+2021-08-06 10:59:03.747 [93586] main/113/raft_worker I> RAFT: persisted state {term: 17}
+2021-08-06 10:59:03.747 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:03.747 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:03.747 [93586] main/113/raft_worker I> RAFT: persisted state {term: 17, vote: 3}
+2021-08-06 10:59:03.747 [93585] main/113/raft_worker I> RAFT: persisted state {term: 17, vote: 2}
+2021-08-06 10:59:03.747 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:03.747 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:03.747 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 17, state: follower} from 3
+2021-08-06 10:59:03.747 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 17, state: follower} from 2
+2021-08-06 10:59:03.747 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 17, vote: 3, state: candidate, vclock: {1: 775, 2: 3, 3: 75}} from 3
+2021-08-06 10:59:03.747 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:03.747 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 17, vote: 2, state: candidate, vclock: {1: 775, 2: 3, 3: 75}} from 2
+2021-08-06 10:59:03.747 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:59:04.261 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:04.261 [93586] main I> RAFT: bump term to 18, follow
+2021-08-06 10:59:04.261 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:04.262 [93586] main/113/raft_worker I> RAFT: persisted state {term: 18, vote: 3}
+2021-08-06 10:59:04.262 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:04.262 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 18, vote: 3, state: candidate, vclock: {1: 775, 2: 3, 3: 75}} from 3
+2021-08-06 10:59:04.262 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 18, follow
+2021-08-06 10:59:04.262 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:59:04.263 [93585] main/113/raft_worker I> RAFT: persisted state {term: 18, vote: 3}
+2021-08-06 10:59:04.263 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 18, vote: 3, state: follower} from 2
+2021-08-06 10:59:04.263 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:04.263 [93586] main/126/rwbell I> RW vclock:{"0":23,"1":775,"2":3,"3":75} election:{"state":"leader","vote":3,"leader":3,"term":18} (was ro:0.52s)
+2021-08-06 10:59:04.264 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 18, vote: 3, state: leader} from 3
+2021-08-06 10:59:04.264 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:04.264 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:59:04.264 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 18, vote: 3, state: follower} from 2
+2021-08-06 10:59:04.264 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:04.265 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 0.524s
+2021-08-06 10:59:04.294 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:04.294 [93584] main I> RAFT: bump term to 18, follow
+2021-08-06 10:59:04.294 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:04.294 [93584] main/113/raft_worker I> RAFT: persisted state {term: 18, vote: 1}
+2021-08-06 10:59:04.295 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:04.295 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 18, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:04.295 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:04.295 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 18, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:04.295 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:04.836 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:04.836 [93584] main I> RAFT: bump term to 19, follow
+2021-08-06 10:59:04.836 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:04.836 [93584] main/113/raft_worker I> RAFT: persisted state {term: 19, vote: 1}
+2021-08-06 10:59:04.836 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:04.836 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 19, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:04.836 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 19, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:04.836 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 19, follow
+2021-08-06 10:59:04.836 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 19, follow
+2021-08-06 10:59:04.836 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:04.836 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:04.836 [93586] main/126/rwbell I> RO vclock:{"0":23,"1":775,"2":3,"3":93} election:{"state":"follower","vote":0,"leader":0,"term":19} (was rw:0.57s
+2021-08-06 10:59:04.836 [93585] main/113/raft_worker I> RAFT: persisted state {term: 19}
+2021-08-06 10:59:04.836 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:04.836 [93586] main/113/raft_worker I> RAFT: persisted state {term: 19}
+2021-08-06 10:59:04.836 [93585] main/113/raft_worker I> RAFT: persisted state {term: 19, vote: 2}
+2021-08-06 10:59:04.836 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:04.836 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:04.836 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 19, state: follower} from 2
+2021-08-06 10:59:04.836 [93586] main/113/raft_worker I> RAFT: persisted state {term: 19, vote: 3}
+2021-08-06 10:59:04.836 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:04.836 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 19, vote: 2, state: candidate, vclock: {1: 775, 2: 3, 3: 93}} from 2
+2021-08-06 10:59:04.836 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:04.836 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 19, state: follower} from 3
+2021-08-06 10:59:04.836 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 19, vote: 3, state: candidate, vclock: {1: 775, 2: 3, 3: 93}} from 3
+2021-08-06 10:59:04.836 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:59:05.344 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:05.344 [93585] main I> RAFT: bump term to 20, follow
+2021-08-06 10:59:05.344 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:05.344 [93585] main/113/raft_worker I> RAFT: persisted state {term: 20, vote: 2}
+2021-08-06 10:59:05.344 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:05.344 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 20, vote: 2, state: candidate, vclock: {1: 775, 2: 3, 3: 93}} from 2
+2021-08-06 10:59:05.344 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 20, follow
+2021-08-06 10:59:05.345 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:05.345 [93586] main/113/raft_worker I> RAFT: persisted state {term: 20, vote: 2}
+2021-08-06 10:59:05.345 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 20, vote: 2, state: follower} from 3
+2021-08-06 10:59:05.345 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:05.345 [93585] main/127/rwbell I> RW vclock:{"0":25,"1":775,"2":3,"3":93} election:{"state":"leader","vote":2,"leader":2,"term":20} (was ro:3.17s)
+2021-08-06 10:59:05.346 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 20, vote: 2, state: leader} from 2
+2021-08-06 10:59:05.346 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:05.346 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:05.346 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:05.346 [93584] main I> RAFT: bump term to 20, follow
+2021-08-06 10:59:05.346 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:05.346 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 20, vote: 2, state: follower} from 3
+2021-08-06 10:59:05.346 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:05.346 [93584] main/113/raft_worker I> RAFT: persisted state {term: 20, vote: 1}
+2021-08-06 10:59:05.346 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:05.347 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:05.347 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 20, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:05.347 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:05.347 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 20, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:05.347 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:05.871 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:05.871 [93584] main I> RAFT: bump term to 21, follow
+2021-08-06 10:59:05.871 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:05.872 [93584] main/113/raft_worker I> RAFT: persisted state {term: 21, vote: 1}
+2021-08-06 10:59:05.872 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:05.872 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 21, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:05.872 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 21, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:05.872 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 21, follow
+2021-08-06 10:59:05.872 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 21, follow
+2021-08-06 10:59:05.872 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:05.872 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:05.872 [93585] main/127/rwbell I> RO vclock:{"0":25,"1":775,"2":4,"3":93} election:{"state":"follower","vote":0,"leader":0,"term":21} (was rw:0.53s
+2021-08-06 10:59:05.873 [93586] main/113/raft_worker I> RAFT: persisted state {term: 21}
+2021-08-06 10:59:05.873 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:05.873 [93585] main/113/raft_worker I> RAFT: persisted state {term: 21}
+2021-08-06 10:59:05.873 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:05.873 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 21, state: follower} from 3
+2021-08-06 10:59:05.873 [93586] main/113/raft_worker I> RAFT: persisted state {term: 21, vote: 3}
+2021-08-06 10:59:05.873 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:05.873 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 21, state: follower} from 2
+2021-08-06 10:59:05.873 [93585] main/113/raft_worker I> RAFT: persisted state {term: 21, vote: 2}
+2021-08-06 10:59:05.873 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:05.873 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 21, vote: 3, state: candidate, vclock: {1: 775, 2: 4, 3: 93}} from 3
+2021-08-06 10:59:05.873 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:05.873 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 21, vote: 2, state: candidate, vclock: {1: 775, 2: 4, 3: 93}} from 2
+2021-08-06 10:59:05.873 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:06.383 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:06.383 [93585] main I> RAFT: bump term to 22, follow
+2021-08-06 10:59:06.383 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:06.384 [93585] main/113/raft_worker I> RAFT: persisted state {term: 22, vote: 2}
+2021-08-06 10:59:06.384 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:06.384 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 22, vote: 2, state: candidate, vclock: {1: 775, 2: 4, 3: 93}} from 2
+2021-08-06 10:59:06.384 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 22, follow
+2021-08-06 10:59:06.384 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:06.384 [93586] main/113/raft_worker I> RAFT: persisted state {term: 22, vote: 2}
+2021-08-06 10:59:06.384 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 22, vote: 2, state: follower} from 3
+2021-08-06 10:59:06.384 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:06.384 [93585] main/127/rwbell I> RW vclock:{"0":28,"1":775,"2":4,"3":93} election:{"state":"leader","vote":2,"leader":2,"term":22} (was ro:0.51s)
+2021-08-06 10:59:06.384 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 22, vote: 2, state: leader} from 2
+2021-08-06 10:59:06.384 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:06.384 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:06.385 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 22, vote: 2, state: follower} from 3
+2021-08-06 10:59:06.385 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:06.385 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:06.411 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:06.411 [93584] main I> RAFT: bump term to 22, follow
+2021-08-06 10:59:06.411 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:06.411 [93584] main/113/raft_worker I> RAFT: persisted state {term: 22, vote: 1}
+2021-08-06 10:59:06.411 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:06.411 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 22, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:06.411 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 22, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:06.411 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:06.411 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:06.927 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:06.927 [93584] main I> RAFT: bump term to 23, follow
+2021-08-06 10:59:06.927 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:06.928 [93584] main/113/raft_worker I> RAFT: persisted state {term: 23, vote: 1}
+2021-08-06 10:59:06.928 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:06.928 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 23, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:06.928 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 23, follow
+2021-08-06 10:59:06.928 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 23, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:06.928 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:06.928 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 23, follow
+2021-08-06 10:59:06.928 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:06.928 [93585] main/127/rwbell I> RO vclock:{"0":28,"1":775,"2":5,"3":93} election:{"state":"follower","vote":0,"leader":0,"term":23} (was rw:0.54s
+2021-08-06 10:59:06.929 [93586] main/113/raft_worker I> RAFT: persisted state {term: 23}
+2021-08-06 10:59:06.929 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:06.929 [93585] main/113/raft_worker I> RAFT: persisted state {term: 23}
+2021-08-06 10:59:06.929 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:06.929 [93586] main/113/raft_worker I> RAFT: persisted state {term: 23, vote: 3}
+2021-08-06 10:59:06.929 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:06.929 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 23, state: follower} from 3
+2021-08-06 10:59:06.929 [93585] main/113/raft_worker I> RAFT: persisted state {term: 23, vote: 2}
+2021-08-06 10:59:06.929 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:06.929 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 23, state: follower} from 2
+2021-08-06 10:59:06.929 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 23, vote: 3, state: candidate, vclock: {1: 775, 2: 5, 3: 93}} from 3
+2021-08-06 10:59:06.929 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:06.929 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 23, vote: 2, state: candidate, vclock: {1: 775, 2: 5, 3: 93}} from 2
+2021-08-06 10:59:06.929 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:07.438 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:07.438 [93585] main I> RAFT: bump term to 24, follow
+2021-08-06 10:59:07.438 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:07.438 [93585] main/113/raft_worker I> RAFT: persisted state {term: 24, vote: 2}
+2021-08-06 10:59:07.439 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:07.439 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 24, vote: 2, state: candidate, vclock: {1: 775, 2: 5, 3: 93}} from 2
+2021-08-06 10:59:07.439 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 24, follow
+2021-08-06 10:59:07.439 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:07.439 [93586] main/113/raft_worker I> RAFT: persisted state {term: 24, vote: 2}
+2021-08-06 10:59:07.440 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 24, vote: 2, state: follower} from 3
+2021-08-06 10:59:07.440 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:07.440 [93585] main/127/rwbell I> RW vclock:{"0":31,"1":775,"2":5,"3":93} election:{"state":"leader","vote":2,"leader":2,"term":24} (was ro:0.51s)
+2021-08-06 10:59:07.440 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 24, vote: 2, state: leader} from 2
+2021-08-06 10:59:07.440 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:07.440 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:07.441 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 24, vote: 2, state: follower} from 3
+2021-08-06 10:59:07.441 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:07.441 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:07.466 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:07.466 [93584] main I> RAFT: bump term to 24, follow
+2021-08-06 10:59:07.466 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:07.467 [93584] main/113/raft_worker I> RAFT: persisted state {term: 24, vote: 1}
+2021-08-06 10:59:07.467 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:07.467 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 24, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:07.467 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 24, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:07.467 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:07.467 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:08.020 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:08.020 [93584] main I> RAFT: bump term to 25, follow
+2021-08-06 10:59:08.020 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:08.020 [93584] main/113/raft_worker I> RAFT: persisted state {term: 25, vote: 1}
+2021-08-06 10:59:08.020 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:08.021 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 25, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:08.021 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 25, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:08.021 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 25, follow
+2021-08-06 10:59:08.021 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 25, follow
+2021-08-06 10:59:08.021 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:08.021 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:08.021 [93585] main/127/rwbell I> RO vclock:{"0":31,"1":775,"2":6,"3":93} election:{"state":"follower","vote":0,"leader":0,"term":25} (was rw:0.58s
+2021-08-06 10:59:08.021 [93586] main/113/raft_worker I> RAFT: persisted state {term: 25}
+2021-08-06 10:59:08.021 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:08.021 [93586] main/113/raft_worker I> RAFT: persisted state {term: 25, vote: 3}
+2021-08-06 10:59:08.021 [93585] main/113/raft_worker I> RAFT: persisted state {term: 25}
+2021-08-06 10:59:08.021 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:08.021 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:08.021 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 25, state: follower} from 3
+2021-08-06 10:59:08.021 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 25, vote: 3, state: candidate, vclock: {1: 775, 2: 6, 3: 93}} from 3
+2021-08-06 10:59:08.021 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - already voted in this term
+2021-08-06 10:59:08.021 [93585] main/113/raft_worker I> RAFT: persisted state {term: 25, vote: 2}
+2021-08-06 10:59:08.021 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:08.021 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 25, state: follower} from 2
+2021-08-06 10:59:08.021 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 25, vote: 2, state: candidate, vclock: {1: 775, 2: 6, 3: 93}} from 2
+2021-08-06 10:59:08.021 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:08.553 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:08.553 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:08.553 [93585] main I> RAFT: bump term to 26, follow
+2021-08-06 10:59:08.553 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:08.553 [93586] main I> RAFT: bump term to 26, follow
+2021-08-06 10:59:08.553 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:08.553 [93585] main/113/raft_worker I> RAFT: persisted state {term: 26, vote: 2}
+2021-08-06 10:59:08.553 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:08.554 [93586] main/113/raft_worker I> RAFT: persisted state {term: 26, vote: 3}
+2021-08-06 10:59:08.554 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:08.554 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 26, vote: 2, state: candidate, vclock: {1: 775, 2: 6, 3: 93}} from 2
+2021-08-06 10:59:08.554 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:08.554 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 26, vote: 3, state: candidate, vclock: {1: 775, 2: 6, 3: 93}} from 3
+2021-08-06 10:59:08.554 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:08.563 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:08.563 [93584] main I> RAFT: bump term to 26, follow
+2021-08-06 10:59:08.563 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:08.563 [93584] main/113/raft_worker I> RAFT: persisted state {term: 26, vote: 1}
+2021-08-06 10:59:08.563 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:08.563 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 26, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:08.563 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:08.563 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 26, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:08.563 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:09.068 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:09.068 [93585] main I> RAFT: bump term to 27, follow
+2021-08-06 10:59:09.068 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:09.069 [93585] main/113/raft_worker I> RAFT: persisted state {term: 27, vote: 2}
+2021-08-06 10:59:09.069 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:09.069 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 27, vote: 2, state: candidate, vclock: {1: 775, 2: 6, 3: 93}} from 2
+2021-08-06 10:59:09.069 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 27, follow
+2021-08-06 10:59:09.069 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:09.069 [93586] main/113/raft_worker I> RAFT: persisted state {term: 27, vote: 2}
+2021-08-06 10:59:09.069 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 27, vote: 2, state: follower} from 3
+2021-08-06 10:59:09.069 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:09.069 [93585] main/127/rwbell I> RW vclock:{"0":35,"1":775,"2":6,"3":93} election:{"state":"leader","vote":2,"leader":2,"term":27} (was ro:1.05s)
+2021-08-06 10:59:09.069 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 27, vote: 2, state: leader} from 2
+2021-08-06 10:59:09.069 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:09.069 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:09.069 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 27, vote: 2, state: follower} from 3
+2021-08-06 10:59:09.069 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:09.069 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:09.079 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:09.079 [93584] main I> RAFT: bump term to 27, follow
+2021-08-06 10:59:09.079 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:09.079 [93584] main/113/raft_worker I> RAFT: persisted state {term: 27, vote: 1}
+2021-08-06 10:59:09.079 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:09.079 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 27, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:09.079 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 27, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:09.079 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:09.079 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:09.620 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:09.620 [93584] main I> RAFT: bump term to 28, follow
+2021-08-06 10:59:09.620 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:09.620 [93584] main/113/raft_worker I> RAFT: persisted state {term: 28, vote: 1}
+2021-08-06 10:59:09.620 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:09.621 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 28, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:09.621 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 28, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:09.621 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 28, follow
+2021-08-06 10:59:09.621 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 28, follow
+2021-08-06 10:59:09.621 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:09.621 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:09.621 [93585] main/127/rwbell I> RO vclock:{"0":35,"1":775,"2":7,"3":93} election:{"state":"follower","vote":0,"leader":0,"term":28} (was rw:0.55s
+2021-08-06 10:59:09.621 [93586] main/113/raft_worker I> RAFT: persisted state {term: 28}
+2021-08-06 10:59:09.621 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:09.622 [93585] main/113/raft_worker I> RAFT: persisted state {term: 28}
+2021-08-06 10:59:09.622 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:09.622 [93586] main/113/raft_worker I> RAFT: persisted state {term: 28, vote: 3}
+2021-08-06 10:59:09.622 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:09.622 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 28, state: follower} from 3
+2021-08-06 10:59:09.622 [93585] main/113/raft_worker I> RAFT: persisted state {term: 28, vote: 2}
+2021-08-06 10:59:09.622 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:09.622 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 28, vote: 3, state: candidate, vclock: {1: 775, 2: 7, 3: 93}} from 3
+2021-08-06 10:59:09.622 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 28, state: follower} from 2
+2021-08-06 10:59:09.622 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:09.623 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 28, vote: 2, state: candidate, vclock: {1: 775, 2: 7, 3: 93}} from 2
+2021-08-06 10:59:09.623 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:10.131 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:10.131 [93586] main I> RAFT: bump term to 29, follow
+2021-08-06 10:59:10.131 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:10.131 [93586] main/113/raft_worker I> RAFT: persisted state {term: 29, vote: 3}
+2021-08-06 10:59:10.132 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:10.132 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 29, vote: 3, state: candidate, vclock: {1: 775, 2: 7, 3: 93}} from 3
+2021-08-06 10:59:10.132 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 29, follow
+2021-08-06 10:59:10.132 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:59:10.132 [93585] main/113/raft_worker I> RAFT: persisted state {term: 29, vote: 3}
+2021-08-06 10:59:10.132 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 29, vote: 3, state: follower} from 2
+2021-08-06 10:59:10.132 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:10.132 [93586] main/126/rwbell I> RW vclock:{"0":39,"1":775,"2":7,"3":93} election:{"state":"leader","vote":3,"leader":3,"term":29} (was ro:5.30s)
+2021-08-06 10:59:10.132 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 29, vote: 3, state: leader} from 3
+2021-08-06 10:59:10.132 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:10.132 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:59:10.133 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 29, vote: 3, state: follower} from 2
+2021-08-06 10:59:10.133 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:10.133 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:59:10.153 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:10.153 [93584] main I> RAFT: bump term to 29, follow
+2021-08-06 10:59:10.153 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:10.153 [93584] main/113/raft_worker I> RAFT: persisted state {term: 29, vote: 1}
+2021-08-06 10:59:10.153 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:10.154 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 29, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:10.154 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 29, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:10.154 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:10.154 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 5.377s
+2021-08-06 10:59:10.699 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:10.699 [93584] main I> RAFT: bump term to 30, follow
+2021-08-06 10:59:10.699 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:10.699 [93584] main/113/raft_worker I> RAFT: persisted state {term: 30, vote: 1}
+2021-08-06 10:59:10.699 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:10.700 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 30, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:10.700 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 30, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:10.700 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 30, follow
+2021-08-06 10:59:10.700 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 30, follow
+2021-08-06 10:59:10.700 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:10.700 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:10.700 [93586] main/126/rwbell I> RO vclock:{"0":39,"1":775,"2":7,"3":108} election:{"state":"follower","vote":0,"leader":0,"term":30} (was rw:0.57s
+2021-08-06 10:59:10.700 [93585] main/113/raft_worker I> RAFT: persisted state {term: 30}
+2021-08-06 10:59:10.700 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:10.700 [93586] main/113/raft_worker I> RAFT: persisted state {term: 30}
+2021-08-06 10:59:10.700 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:10.700 [93585] main/113/raft_worker I> RAFT: persisted state {term: 30, vote: 2}
+2021-08-06 10:59:10.700 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:10.700 [93586] main/113/raft_worker I> RAFT: persisted state {term: 30, vote: 3}
+2021-08-06 10:59:10.700 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:10.700 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 30, state: follower} from 3
+2021-08-06 10:59:10.700 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 30, state: follower} from 2
+2021-08-06 10:59:10.700 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 30, vote: 2, state: candidate, vclock: {1: 775, 2: 7, 3: 108}} from 2
+2021-08-06 10:59:10.700 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 30, vote: 3, state: candidate, vclock: {1: 775, 2: 7, 3: 108}} from 3
+2021-08-06 10:59:10.700 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:10.700 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:59:11.209 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:11.209 [93585] main I> RAFT: bump term to 31, follow
+2021-08-06 10:59:11.209 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:11.210 [93585] main/113/raft_worker I> RAFT: persisted state {term: 31, vote: 2}
+2021-08-06 10:59:11.210 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:11.210 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 31, vote: 2, state: candidate, vclock: {1: 775, 2: 7, 3: 108}} from 2
+2021-08-06 10:59:11.210 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 31, follow
+2021-08-06 10:59:11.210 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:11.211 [93586] main/113/raft_worker I> RAFT: persisted state {term: 31, vote: 2}
+2021-08-06 10:59:11.211 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 31, vote: 2, state: follower} from 3
+2021-08-06 10:59:11.211 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:11.211 [93585] main/127/rwbell I> RW vclock:{"0":41,"1":775,"2":7,"3":108} election:{"state":"leader","vote":2,"leader":2,"term":31} (was ro:1.59s)
+2021-08-06 10:59:11.212 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 31, vote: 2, state: leader} from 2
+2021-08-06 10:59:11.212 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:11.212 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:11.213 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 31, vote: 2, state: follower} from 3
+2021-08-06 10:59:11.213 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:11.213 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:11.221 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:11.221 [93584] main I> RAFT: bump term to 31, follow
+2021-08-06 10:59:11.221 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:11.221 [93584] main/113/raft_worker I> RAFT: persisted state {term: 31, vote: 1}
+2021-08-06 10:59:11.221 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:11.222 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 31, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:11.222 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:11.222 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 31, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:11.222 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:11.772 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:11.772 [93584] main I> RAFT: bump term to 32, follow
+2021-08-06 10:59:11.772 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:11.772 [93584] main/113/raft_worker I> RAFT: persisted state {term: 32, vote: 1}
+2021-08-06 10:59:11.772 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:11.772 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 32, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:11.772 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 32, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:11.773 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 32, follow
+2021-08-06 10:59:11.773 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 32, follow
+2021-08-06 10:59:11.773 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:11.773 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:11.773 [93585] main/127/rwbell I> RO vclock:{"0":41,"1":775,"2":8,"3":108} election:{"state":"follower","vote":0,"leader":0,"term":32} (was rw:0.56s
+2021-08-06 10:59:11.773 [93586] main/113/raft_worker I> RAFT: persisted state {term: 32}
+2021-08-06 10:59:11.773 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:11.773 [93585] main/113/raft_worker I> RAFT: persisted state {term: 32}
+2021-08-06 10:59:11.773 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:11.773 [93586] main/113/raft_worker I> RAFT: persisted state {term: 32, vote: 3}
+2021-08-06 10:59:11.773 [93585] main/113/raft_worker I> RAFT: persisted state {term: 32, vote: 2}
+2021-08-06 10:59:11.773 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:11.774 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 32, state: follower} from 3
+2021-08-06 10:59:11.773 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:11.774 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 32, state: follower} from 2
+2021-08-06 10:59:11.774 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 32, vote: 2, state: candidate, vclock: {1: 775, 2: 8, 3: 108}} from 2
+2021-08-06 10:59:11.774 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:11.774 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 32, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 108}} from 3
+2021-08-06 10:59:11.774 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:12.283 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:12.283 [93586] main I> RAFT: bump term to 33, follow
+2021-08-06 10:59:12.284 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:12.284 [93586] main/113/raft_worker I> RAFT: persisted state {term: 33, vote: 3}
+2021-08-06 10:59:12.284 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:12.285 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 33, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 108}} from 3
+2021-08-06 10:59:12.285 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 33, follow
+2021-08-06 10:59:12.285 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:59:12.285 [93585] main/113/raft_worker I> RAFT: persisted state {term: 33, vote: 3}
+2021-08-06 10:59:12.286 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 33, vote: 3, state: follower} from 2
+2021-08-06 10:59:12.286 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:12.286 [93586] main/126/rwbell I> RW vclock:{"0":45,"1":775,"2":8,"3":108} election:{"state":"leader","vote":3,"leader":3,"term":33} (was ro:1.59s)
+2021-08-06 10:59:12.286 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 33, vote: 3, state: leader} from 3
+2021-08-06 10:59:12.287 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:12.287 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:59:12.287 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 33, vote: 3, state: follower} from 2
+2021-08-06 10:59:12.287 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:12.287 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:59:12.292 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:12.292 [93584] main I> RAFT: bump term to 33, follow
+2021-08-06 10:59:12.292 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:12.292 [93584] main/113/raft_worker I> RAFT: persisted state {term: 33, vote: 1}
+2021-08-06 10:59:12.292 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:12.292 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 33, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:12.293 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:12.293 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 33, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:12.293 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 1.669s
+2021-08-06 10:59:12.830 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:12.830 [93584] main I> RAFT: bump term to 34, follow
+2021-08-06 10:59:12.830 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:12.831 [93584] main/113/raft_worker I> RAFT: persisted state {term: 34, vote: 1}
+2021-08-06 10:59:12.831 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:12.831 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 34, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:12.831 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 34, follow
+2021-08-06 10:59:12.831 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:12.831 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 34, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:12.831 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 34, follow
+2021-08-06 10:59:12.831 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:12.832 [93586] main/126/rwbell I> RO vclock:{"0":45,"1":775,"2":8,"3":122} election:{"state":"follower","vote":0,"leader":0,"term":34} (was rw:0.55s
+2021-08-06 10:59:12.832 [93585] main/113/raft_worker I> RAFT: persisted state {term: 34}
+2021-08-06 10:59:12.832 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:12.832 [93586] main/113/raft_worker I> RAFT: persisted state {term: 34}
+2021-08-06 10:59:12.832 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:12.832 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 34, state: follower} from 2
+2021-08-06 10:59:12.832 [93585] main/113/raft_worker I> RAFT: persisted state {term: 34, vote: 2}
+2021-08-06 10:59:12.832 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:12.832 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 34, state: follower} from 3
+2021-08-06 10:59:12.832 [93586] main/113/raft_worker I> RAFT: persisted state {term: 34, vote: 3}
+2021-08-06 10:59:12.832 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:12.833 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 34, vote: 2, state: candidate, vclock: {1: 775, 2: 8, 3: 122}} from 2
+2021-08-06 10:59:12.833 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:12.833 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 34, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 122}} from 3
+2021-08-06 10:59:12.833 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:59:13.362 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:13.362 [93586] main I> RAFT: bump term to 35, follow
+2021-08-06 10:59:13.362 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:13.362 [93586] main/113/raft_worker I> RAFT: persisted state {term: 35, vote: 3}
+2021-08-06 10:59:13.362 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:13.362 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 35, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 122}} from 3
+2021-08-06 10:59:13.362 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 35, follow
+2021-08-06 10:59:13.362 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:59:13.362 [93585] main/113/raft_worker I> RAFT: persisted state {term: 35, vote: 3}
+2021-08-06 10:59:13.363 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 35, vote: 3, state: follower} from 2
+2021-08-06 10:59:13.363 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:13.363 [93586] main/126/rwbell I> RW vclock:{"0":48,"1":775,"2":8,"3":122} election:{"state":"leader","vote":3,"leader":3,"term":35} (was ro:0.53s)
+2021-08-06 10:59:13.363 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 35, vote: 3, state: leader} from 3
+2021-08-06 10:59:13.363 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:13.363 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:59:13.363 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 35, vote: 3, state: follower} from 2
+2021-08-06 10:59:13.363 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:13.364 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:59:13.365 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:13.365 [93584] main I> RAFT: bump term to 35, follow
+2021-08-06 10:59:13.365 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:13.365 [93584] main/113/raft_worker I> RAFT: persisted state {term: 35, vote: 1}
+2021-08-06 10:59:13.365 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:13.365 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 35, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:13.365 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:13.365 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 35, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:13.365 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 0.616s
+2021-08-06 10:59:13.888 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:13.888 [93584] main I> RAFT: bump term to 36, follow
+2021-08-06 10:59:13.888 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:13.889 [93584] main/113/raft_worker I> RAFT: persisted state {term: 36, vote: 1}
+2021-08-06 10:59:13.889 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:13.889 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 36, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:13.889 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 36, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:13.889 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 36, follow
+2021-08-06 10:59:13.889 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 36, follow
+2021-08-06 10:59:13.889 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:13.889 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:13.889 [93586] main/126/rwbell I> RO vclock:{"0":48,"1":775,"2":8,"3":137} election:{"state":"follower","vote":0,"leader":0,"term":36} (was rw:0.53s
+2021-08-06 10:59:13.890 [93585] main/113/raft_worker I> RAFT: persisted state {term: 36}
+2021-08-06 10:59:13.890 [93586] main/113/raft_worker I> RAFT: persisted state {term: 36}
+2021-08-06 10:59:13.890 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:13.890 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:13.890 [93585] main/113/raft_worker I> RAFT: persisted state {term: 36, vote: 2}
+2021-08-06 10:59:13.890 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:13.890 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 36, state: follower} from 2
+2021-08-06 10:59:13.890 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 36, state: follower} from 3
+2021-08-06 10:59:13.890 [93586] main/113/raft_worker I> RAFT: persisted state {term: 36, vote: 3}
+2021-08-06 10:59:13.890 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:13.890 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 36, vote: 2, state: candidate, vclock: {1: 775, 2: 8, 3: 137}} from 2
+2021-08-06 10:59:13.890 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:13.890 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 36, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 137}} from 3
+2021-08-06 10:59:13.890 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:59:14.421 [93586] main I> RAFT: begin new election round
+2021-08-06 10:59:14.421 [93586] main I> RAFT: bump term to 37, follow
+2021-08-06 10:59:14.421 [93586] main I> RAFT: vote for 3, follow
+2021-08-06 10:59:14.421 [93586] main/113/raft_worker I> RAFT: persisted state {term: 37, vote: 3}
+2021-08-06 10:59:14.421 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:14.422 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 37, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 137}} from 3
+2021-08-06 10:59:14.422 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: bump term to 37, follow
+2021-08-06 10:59:14.422 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote for 3, follow
+2021-08-06 10:59:14.422 [93585] main/113/raft_worker I> RAFT: persisted state {term: 37, vote: 3}
+2021-08-06 10:59:14.422 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 37, vote: 3, state: follower} from 2
+2021-08-06 10:59:14.422 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:14.422 [93586] main/126/rwbell I> RW vclock:{"0":51,"1":775,"2":8,"3":137} election:{"state":"leader","vote":3,"leader":3,"term":37} (was ro:0.53s)
+2021-08-06 10:59:14.423 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 37, vote: 3, state: leader} from 3
+2021-08-06 10:59:14.423 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:14.423 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: leader is 3, follow
+2021-08-06 10:59:14.423 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 37, vote: 3, state: follower} from 2
+2021-08-06 10:59:14.423 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:14.423 [93586] relay/[::ffff:127.0.0.1]:56779/101/main I> recover from `.tnt/tnt3/00000000000000000014.xlog'
+2021-08-06 10:59:14.426 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:14.426 [93584] main I> RAFT: bump term to 37, follow
+2021-08-06 10:59:14.426 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:14.426 [93584] main/113/raft_worker I> RAFT: persisted state {term: 37, vote: 1}
+2021-08-06 10:59:14.426 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:14.426 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 37, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:14.426 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 37, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:14.426 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+2021-08-06 10:59:14.426 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 3
+127.0.0.1:3303 became rw
+127.0.0.1:3303 not ro anymore
+Master discovered: 127.0.0.1:3303 (aaaaaaaa-0003-0000-0000-000000000001) in 0.518s
+2021-08-06 10:59:14.967 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:14.967 [93584] main I> RAFT: bump term to 38, follow
+2021-08-06 10:59:14.967 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:14.968 [93584] main/113/raft_worker I> RAFT: persisted state {term: 38, vote: 1}
+2021-08-06 10:59:14.968 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:14.968 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 38, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:14.968 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 38, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:14.968 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 38, follow
+2021-08-06 10:59:14.968 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 38, follow
+2021-08-06 10:59:14.968 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:14.968 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:14.969 [93586] main/126/rwbell I> RO vclock:{"0":51,"1":775,"2":8,"3":154} election:{"state":"follower","vote":0,"leader":0,"term":38} (was rw:0.55s
+2021-08-06 10:59:14.969 [93585] main/113/raft_worker I> RAFT: persisted state {term: 38}
+2021-08-06 10:59:14.969 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:14.969 [93586] main/113/raft_worker I> RAFT: persisted state {term: 38}
+2021-08-06 10:59:14.969 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:14.969 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 38, state: follower} from 2
+2021-08-06 10:59:14.969 [93585] main/113/raft_worker I> RAFT: persisted state {term: 38, vote: 2}
+2021-08-06 10:59:14.969 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:14.970 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 38, state: follower} from 3
+2021-08-06 10:59:14.970 [93586] main/113/raft_worker I> RAFT: persisted state {term: 38, vote: 3}
+2021-08-06 10:59:14.970 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:14.970 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 38, vote: 2, state: candidate, vclock: {1: 775, 2: 8, 3: 154}} from 2
+2021-08-06 10:59:14.970 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:14.970 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 38, vote: 3, state: candidate, vclock: {1: 775, 2: 8, 3: 154}} from 3
+2021-08-06 10:59:14.970 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+127.0.0.1:3303 became ro
+127.0.0.1:3303 not rw anymore
+Waiting for master for 10.000s
+2021-08-06 10:59:15.486 [93585] main I> RAFT: begin new election round
+2021-08-06 10:59:15.486 [93585] main I> RAFT: bump term to 39, follow
+2021-08-06 10:59:15.486 [93585] main I> RAFT: vote for 2, follow
+2021-08-06 10:59:15.487 [93585] main/113/raft_worker I> RAFT: persisted state {term: 39, vote: 2}
+2021-08-06 10:59:15.487 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:15.487 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 39, vote: 2, state: candidate, vclock: {1: 775, 2: 8, 3: 154}} from 2
+2021-08-06 10:59:15.487 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: bump term to 39, follow
+2021-08-06 10:59:15.487 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote for 2, follow
+2021-08-06 10:59:15.487 [93586] main/113/raft_worker I> RAFT: persisted state {term: 39, vote: 2}
+2021-08-06 10:59:15.487 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 39, vote: 2, state: follower} from 3
+2021-08-06 10:59:15.487 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: enter leader state with quorum 2
+2021-08-06 10:59:15.487 [93585] main/127/rwbell I> RW vclock:{"0":53,"1":775,"2":8,"3":154} election:{"state":"leader","vote":2,"leader":2,"term":39} (was ro:3.71s)
+2021-08-06 10:59:15.487 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 39, vote: 2, state: leader} from 2
+2021-08-06 10:59:15.487 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - this is a notification about a vote for a third node, not a request
+2021-08-06 10:59:15.487 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: leader is 2, follow
+2021-08-06 10:59:15.487 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 39, vote: 2, state: follower} from 3
+2021-08-06 10:59:15.487 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:15.488 [93585] relay/[::ffff:127.0.0.1]:56777/101/main I> recover from `.tnt/tnt2/00000000000000000013.xlog'
+2021-08-06 10:59:15.493 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:15.493 [93584] main I> RAFT: bump term to 39, follow
+2021-08-06 10:59:15.493 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:15.493 [93584] main/113/raft_worker I> RAFT: persisted state {term: 39, vote: 1}
+2021-08-06 10:59:15.493 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:15.493 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 39, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:15.493 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:15.493 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 39, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:15.493 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the leader is already known - 2
+2021-08-06 10:59:16.030 [93584] main I> RAFT: begin new election round
+2021-08-06 10:59:16.030 [93584] main I> RAFT: bump term to 40, follow
+2021-08-06 10:59:16.030 [93584] main I> RAFT: vote for 1, follow
+2021-08-06 10:59:16.030 [93584] main/113/raft_worker I> RAFT: persisted state {term: 40, vote: 1}
+2021-08-06 10:59:16.030 [93584] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:16.030 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 40, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:16.030 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 40, follow
+2021-08-06 10:59:16.030 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: message {term: 40, vote: 1, state: candidate, vclock: {1: 790, 2: 1, 3: 1}} from 1
+2021-08-06 10:59:16.030 [93586] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:16.030 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: bump term to 40, follow
+2021-08-06 10:59:16.030 [93585] main/110/applier/127.0.0.1:3301 I> RAFT: vote request is skipped - the vclock is not acceptable
+2021-08-06 10:59:16.031 [93585] main/127/rwbell I> RO vclock:{"0":53,"1":775,"2":9,"3":154} election:{"state":"follower","vote":0,"leader":0,"term":40} (was rw:0.54s
+2021-08-06 10:59:16.031 [93586] main/113/raft_worker I> RAFT: persisted state {term: 40}
+2021-08-06 10:59:16.031 [93586] main/113/raft_worker I> RAFT: vote for 3, follow
+2021-08-06 10:59:16.031 [93585] main/113/raft_worker I> RAFT: persisted state {term: 40}
+2021-08-06 10:59:16.031 [93585] main/113/raft_worker I> RAFT: vote for 2, follow
+2021-08-06 10:59:16.031 [93586] main/113/raft_worker I> RAFT: persisted state {term: 40, vote: 3}
+2021-08-06 10:59:16.031 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 40, state: follower} from 3
+2021-08-06 10:59:16.031 [93586] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:16.031 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 40, state: follower} from 2
+2021-08-06 10:59:16.031 [93585] main/113/raft_worker I> RAFT: persisted state {term: 40, vote: 2}
+2021-08-06 10:59:16.031 [93585] main/113/raft_worker I> RAFT: enter candidate state with 1 self vote
+2021-08-06 10:59:16.031 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: message {term: 40, vote: 3, state: candidate, vclock: {1: 775, 2: 9, 3: 154}} from 3
+2021-08-06 10:59:16.031 [93585] main/112/applier/127.0.0.1:3303 I> RAFT: vote request is skipped - competing candidate
+2021-08-06 10:59:16.031 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: message {term: 40, vote: 2, state: candidate, vclock: {1: 775, 2: 9, 3: 154}} from 2
+2021-08-06 10:59:16.031 [93586] main/111/applier/127.0.0.1:3302 I> RAFT: vote request is skipped - competing candidate

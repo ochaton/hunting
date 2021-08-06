@@ -1,48 +1,26 @@
 require('strict').on()
 
-local ips = {}
-
-local function mydockername()
-	for _, name in ipairs{"tnt1", "tnt2", "tnt3", "$HOSTNAME"} do
-		ips[name] = io.popen("ping -c 1 "..name.." | head -1 | awk '{ print $3 }' | grep -oE '((\\d|\\.)+)'")
-			:read("*all"):gsub("\n", "")
-	end
-	local myip = ips["$HOSTNAME"]
-	for hostname, ip in pairs(ips) do
-		if ip == myip then
-			return hostname
-		end
-	end
-end
-
 local fiber = require 'fiber'
 local log = require 'log'
+local fio = require 'fio'
 
-local docker_name = assert(mydockername(), "my hostname wasn't discovered")
-log.info("MY HOSTNAME: %s", docker_name)
-
-os.execute("sleep 5")
+local instance_name = fio.basename(fio.dirname(fio.abspath(debug.getinfo(1, "S").source:match("^@(.+)$"))))
+log.info("MY HOSTNAME: %s", instance_name)
 
 local uuids = {
-	tnt1 = "4c159958-a66c-41e4-9aa8-a197a672dcb8",
-	tnt3 = "94355c39-2eb2-4e01-8c8b-ea407bb76f47",
-	tnt2 = "a6fb5ff2-7e84-4ecf-b311-0ae70f37fb8e",
+	tnt1 = "aaaaaaaa-0001-0000-0000-000000000001",
+	tnt2 = "aaaaaaaa-0002-0000-0000-000000000001",
+	tnt3 = "aaaaaaaa-0003-0000-0000-000000000001",
 }
 
-io.popen("tc qdisc add dev eth0 root netem delay 50ms"):read("*all")
-
--- DROP tnt1 -> tnt3 and tnt3 -> tnt1 packages
--- if docker_name == "tnt1" then
--- 	io.popen("iptables -I INPUT -s "..ips["tnt3"].." -j DROP"):read("*all")
--- elseif docker_name == "tnt3" then
--- 	io.popen("iptables -I INPUT -s "..ips["tnt1"].." -j DROP"):read("*all")
--- end
-
 box.cfg{
-	instance_uuid = assert(uuids[docker_name], "failed to get instance_uuid"),
+	instance_uuid = assert(uuids[instance_name], "failed to get instance_uuid"),
 	replicaset_uuid = 'f4ad5d13-28a2-48ed-a4a6-3d6b93b8d9c8',
-	listen = '0.0.0.0:3301',
-	replication = { "tnt1:3301", "tnt2:3301", "tnt3:3301" },
+	listen = 3300+instance_name:match("%d+"),
+	custom_proc_title = instance_name,
+	memtx_dir = '.tnt/'..instance_name,
+	wal_dir = '.tnt/'..instance_name,
+	replication = { "127.0.0.1:3301", "127.0.0.1:3302", "127.0.0.1:3303" },
 	election_mode = 'candidate',
 	replication_synchro_quorum = 2,
 	replication_connect_quorum = 2,
